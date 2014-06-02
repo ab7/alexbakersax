@@ -1,0 +1,466 @@
+/**********Normalize**********/
+
+html {
+  font-family: "Noto Sans", sans-serif;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+
+/**********Custom Styles**********/
+
+/* header */
+header {
+  border-bottom: 5px solid rgba(255, 108, 34, 1);
+  color: #fff;
+  font-family: "Lobster";
+  background-image: url("../img/sax_keys.jpg");
+  background-size: cover;
+  margin-bottom: 4em;
+  padding: 1em 5%;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.7em;
+  text-shadow: 3px 2px 0px rgba(255, 108, 34, 1);
+}
+
+#login {
+  background-color: rgba(255, 108, 34, 1);
+  border: 2px solid rgba(255, 108, 34, 1);
+  border-radius: 100%;
+  height: 4em;
+  width: 4em;
+  position: absolute;
+  outline: none;
+  bottom: -2.1em;
+  right: 25%;
+}
+
+#login:hover {
+  color: #8dff96;
+  border-color: #8dff96;
+}
+
+/* general section styles */
+section {
+  padding: 1em;
+  margin-top: -2em;
+}
+
+h2 {
+  font-family: "Raleway";
+  margin-bottom: -.4em;
+  margin-top: 0;
+  text-shadow: 1px 1px 0px rgba(255, 108, 34, 1);
+}
+
+img {
+  float: left;
+  padding-right: 1em; 
+  width: 11em;
+}
+
+#alexPic {
+  width: 8em;
+}
+
+/* first time section */
+.firstTimers {
+  background-color: rgba(255, 108, 34, 0.53);
+  border-radius: 2em;
+  margin: 0.8em 5%;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.materialGrid {
+  margin-top: 15px;
+  min-width: 100%;
+}
+
+.materialPic {
+  width: 25px;
+}
+
+.descripCell {
+  width: 80%;
+}
+
+.altoTenor {
+  background-color: rgba(255, 108, 34, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+.clickHere {
+  background-color: rgb(199, 64, 0);
+  border-radius: 100px;
+  border: 1px solid rgba(170, 170, 170, 0.44);
+  color: #fff;
+  font: .5em Verdana;
+  width: 95%;
+}
+
+.clickHere:hover {
+  border: 1px solid #aaa;
+  -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
+  -moz-box-shadow:    -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
+  box-shadow:         -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
+}
+
+.cellColor {
+  background-color: rgba(255, 108, 34, 0.27);
+}
+
+.appCell {
+  background-color: rgba(255, 108, 34, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+th {
+  background-color: rgba(255, 108, 34, 0.62);
+  font-family: "Raleway";
+}
+
+td {
+  font-size: .6em;
+  padding: 1%;
+  text-align: left;
+}
+
+/* videos */
+.vidHolder {
+  background-color: grey;
+  height: 200px;
+  margin: 1em auto;
+}
+
+
+/* footer */
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: rgba(255, 108, 34, 1);
+}
+
+footer a:visited {
+  color: rgba(255, 108, 34, 1);
+}
+
+/**********Media Queries**********/
+
+@media (min-width: 600px) {
+  html {
+    font-size: 120%;
+  }
+  img {
+    width: 13em;
+  }
+  #alexPic{
+    width: 9em;
+  }
+  #materialsWrapper {
+    float: left;
+    width: 48%
+  }
+  #vidWrapper {
+    float: left;
+    font-size: 70%;
+    margin-left: 4%;
+    width: 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 140%;
+  }
+  #main {
+    float: left;
+    width: 55%;
+  }
+  .firstTimers {
+    float: right;
+    margin-top: -1em;
+    width: 35%;
+  }
+  img {
+    width: 16em;
+  }
+  #alexPic{
+    width: 12em;
+  }
+  #materialsWrapper {
+    float: none;
+    width: 100%;
+  }
+  #vidWrapper {
+    float: none;
+    font-size: 70%;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+/**********Helper classes**********/
+
+.center {
+  text-align: center;
+}
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+
+/** {
+  outline: 1px solid red;
+}*/
