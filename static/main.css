@@ -238,12 +238,12 @@ header {
   background-image: url("../img/sax_keys.jpg");
   background-size: cover;
   margin-bottom: 4em;
-  padding: 1em 5%;
+  padding: 1em;
   position: relative;
 }
 
 h1 {
-  font-size: 4.7em;
+  font-size: 4.5em;
   text-shadow: 3px 2px 0px rgba(255, 108, 34, 1);
 }
 
@@ -251,11 +251,11 @@ h1 {
   background-color: rgba(255, 108, 34, 1);
   border: 2px solid rgba(255, 108, 34, 1);
   border-radius: 100%;
-  height: 4em;
-  width: 4em;
+  height: 80px;
+  width: 80px;
   position: absolute;
   outline: none;
-  bottom: -2.1em;
+  bottom: -40px;
   right: 25%;
 }
 
@@ -264,7 +264,12 @@ h1 {
   border-color: #8dff96;
 }
 
-/* general section styles */
+/* content styles */
+.mainWrapper {
+  max-width: 1170px;
+  margin: auto;
+}
+
 section {
   padding: 1em;
   margin-top: -2em;
@@ -279,21 +284,31 @@ h2 {
 
 img {
   float: left;
-  padding-right: 1em; 
+  margin-right: 1em; 
   width: 11em;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
+  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
 }
 
 #alexPic {
+  margin-top: 10px;
   width: 8em;
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
+  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
 }
 
 /* first time section */
 .firstTimers {
   background-color: rgba(255, 108, 34, 0.53);
   border-radius: 2em;
-  margin: 0.8em 5%;
+  margin: 0.8em;
   padding-bottom: 2em;
-  text-align: center;
+}
+
+.firstTimers p {
+  margin-left: 0;
 }
 
 .materialGrid {
@@ -302,7 +317,7 @@ img {
 }
 
 .materialPic {
-  width: 25px;
+  width: 2.5em;
 }
 
 .descripCell {
@@ -342,19 +357,20 @@ img {
 th {
   background-color: rgba(255, 108, 34, 0.62);
   font-family: "Raleway";
+  padding: 1%;
 }
 
 td {
-  font-size: .6em;
+  font-size: .7em;
   padding: 1%;
   text-align: left;
 }
 
 /* videos */
 .vidHolder {
-  background-color: grey;
-  height: 200px;
-  margin: 1em auto;
+  height: 210px;
+  margin-top: 1em;
+  width: 100%;
 }
 
 
@@ -377,21 +393,31 @@ footer a:visited {
   html {
     font-size: 120%;
   }
+  header {
+    border-bottom: 8px solid rgba(255, 108, 34, 1);
+  }
+  #login {
+    border: 3px solid rgba(255, 108, 34, 1);
+    height: 100px;
+    width: 100px;
+    bottom: -50px;
+  }
   img {
     width: 13em;
   }
   #alexPic{
     width: 9em;
   }
-  #materialsWrapper {
+  #materialsWrapper, #vidWrapper {
+    box-sizing: border-box;
     float: left;
-    width: 48%
+    width: 48%;
   }
   #vidWrapper {
-    float: left;
-    font-size: 70%;
     margin-left: 4%;
-    width: 48%;
+  }
+  #vidWrapper h2 {
+    font-size: 100%;
   }
 }
 
@@ -401,26 +427,23 @@ footer a:visited {
   }
   #main {
     float: left;
-    width: 55%;
+    width: 59%;
   }
   .firstTimers {
     float: right;
+    font-size: 80%;
     margin-top: -1em;
     width: 35%;
-  }
-  img {
-    width: 16em;
-  }
-  #alexPic{
-    width: 12em;
   }
   #materialsWrapper {
     float: none;
     width: 100%;
   }
+  .materialPic {
+    width: 3.5em;
+  }
   #vidWrapper {
     float: none;
-    font-size: 70%;
     margin-left: 0;
     width: 100%;
   }
