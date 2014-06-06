@@ -243,7 +243,7 @@ header {
 }
 
 h1 {
-  font-size: 4.5em;
+  font-size: 4em;
   text-shadow: 3px 2px 0px rgba(255, 108, 34, 1);
 }
 
@@ -282,7 +282,7 @@ h2 {
   text-shadow: 1px 1px 0px rgba(255, 108, 34, 1);
 }
 
-img {
+section > img {
   float: left;
   margin-right: 1em; 
   width: 11em;
@@ -304,7 +304,7 @@ img {
   background-color: rgba(255, 108, 34, 0.53);
   border-radius: 2em;
   margin: 0.8em;
-  padding-bottom: 2em;
+  padding: 1.5em;
 }
 
 .firstTimers p {
@@ -362,7 +362,7 @@ th {
 
 td {
   font-size: .7em;
-  padding: 1%;
+  padding: 3px 5px;
   text-align: left;
 }
 
@@ -431,7 +431,7 @@ footer a:visited {
   }
   .firstTimers {
     float: right;
-    font-size: 80%;
+    font-size: 76%;
     margin-top: -1em;
     width: 35%;
   }
@@ -440,7 +440,7 @@ footer a:visited {
     width: 100%;
   }
   .materialPic {
-    width: 3.5em;
+    width: 3em;
   }
   #vidWrapper {
     float: none;
