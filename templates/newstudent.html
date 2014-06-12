@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="formTitle">New Student Signup</h2>
+    <fieldset>
+      <form method="post">
+        <label>
+          Username
+          <input type="text" name="username" value="{{username}}" required>
+          <span class="error">{{name_error}}</span>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" value="" required>
+          <span class="error">{{password_error}}</span>
+        </label>
+        <label>
+          Verify Password
+          <input type="password" name="verify" value="" required>
+          <span class="error">{{verify_error}}</span>
+        </label>
+        <label>
+          Email
+          <input type="text" name="email" value="{{email}}" required>
+          <span class="error">{{email_error}}</span>
+        </label>
+        <div class="error">
+          {{login_error}}
+        </div>
+        <button>
+          Create
+        </button>
+      </form>
+    </fieldset>
+    <a id="return" href="/">return</a>
+{% endblock %}
