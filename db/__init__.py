@@ -22,6 +22,9 @@ def entries_cache(key_='top', update=False):
         memcache.set('query_time', time.time())
     return items
 
+def get_students():
+    return Students.query().order(Students.user)
+
 def write_notes(**kwargs):
     entry = Notes(**kwargs)
     entry.put()
@@ -32,5 +35,3 @@ def write_notes(**kwargs):
 def write_user(**kwargs):
     entry = Students(**kwargs)
     return entry.put()
-
-
