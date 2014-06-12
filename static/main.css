@@ -395,19 +395,23 @@ footer a:visited {
   color: rgba(255, 108, 34, 1);
 }
 
-/**## LOGIN PAGE ##**/
-.login {
+/**## LOGIN AND SIGNUP ##**/
+.formTitle {
+  text-align: center;
+}
+
+fieldset {
   border-radius: 1em;
   margin: 1em auto;
   padding: 1em;
   width: 35%;
 }
 
-.login input {
+fieldset input {
   display: block;
 }
 
-.login button {
+fieldset button {
   border-radius: 5px;
   margin-top: 1em;
   outline: none;
@@ -423,6 +427,11 @@ footer a:visited {
 #return:visited {
   color: rgba(255, 108, 34, 1);
 }
+
+.error {
+  color: red;
+}
+
 
 /**********Media Queries**********/
 
