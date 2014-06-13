@@ -9,11 +9,6 @@ import config
 
 
 ### USERS ###
-ADMIN_ID = config.data['admin']
-def is_admin(user_id):
-    """Checks user id for admin status"""
-    return user_id == ADMIN_ID
-
 USER_RE = re.compile(r"^[a-zA-Z0-9_-]{3,20}$")
 def valid_username(username):
     """Validates user name"""
@@ -27,7 +22,7 @@ def valid_password(password):
 EMAIL_RE = re.compile(r"^[\S]+@[\S]+\.[\S]+$")
 def valid_email(email):
     """Validates user email"""
-    return not email or EMAIL_RE.match(email)
+    return email and EMAIL_RE.match(email)
 
 def password_protect(pw):
     """Salts a user password for db entry"""
