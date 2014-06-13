@@ -7,7 +7,7 @@ from google.appengine.ext import ndb
 from Notes import Notes
 from Students import Students
 
-
+### memcache convenience functions ###
 def entries_cache(key_='top', update=False):
     items = memcache.get(key_)
     if items is None or update:
@@ -22,9 +22,19 @@ def entries_cache(key_='top', update=False):
         memcache.set('query_time', time.time())
     return items
 
-def get_students():
+
+### database retrieval convenience functions ###
+def get_all_students():
+    """Returns all Students entities"""
     return Students.query().order(Students.user)
 
+def get_student(user_key):
+    """Takes the encrypted student key and returns the student entity"""
+    decoded_key = ndb.Key(urlsafe=user_key)
+    return decoded_key.get()
+
+
+### database write convenience functions ###
 def write_notes(**kwargs):
     entry = Notes(**kwargs)
     entry.put()
