@@ -4,10 +4,20 @@
   <div class="adminWrapper">
     <h2>Students</h2>
     <nav>
-      <a href="/">Home</a>|<a href="/logout">Logout</a>
+      <a href="/">Home</a>|<a href="/newstudent">New Student</a>
     </nav>
     {% for s in students %}
-      <div>{{ s.user }} | <a href="">view</a> | <a href="/new-notes">new</a> {{s.email}}</div>
+      <div class="studentInfo">
+        <span class="studentCell">
+          <a href="/student?key={{s.key.urlsafe()}}">{{ s.user }}</a>
+        </span>
+        <span class="studentCell">
+          <a href="/newnotes?key={{s.key.urlsafe()}}">new notes</a>
+        </span>
+        <span class="studentCell">
+          {{s.email}}
+        </span>
+      </div>
     {% endfor %}
   </div>
 {% endblock %}
