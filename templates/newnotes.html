@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <fieldset id="notesEntry">
+    <legend>Lesson Notes Entry</legend>
+    <form method="post">
+      <label>
+        <div>Warm Up:</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+      <label>
+        <div>Tips:</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+      <label>
+        <div>To work on this week:</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+      <div class="error">{{error}}</div>
+      <button>Submit!</button>
+    </form>
+  </fieldset>
+  <a id="return" href="/admin">return</a>
+{% endblock %}
