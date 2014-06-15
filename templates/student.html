@@ -6,5 +6,16 @@
     <nav>
       <a href="/">Home</a>|<a href="/logout">Logout</a>
     </nav>
+    {% for n in notes %}
+      <div class="lessonNotes">
+        <h2>Lesson Notes - {{n.created.strftime('%A %b %d, %Y')}}</h2>
+        <h3>Warmup:</h3>
+        <p>{{n.warmup}}</p>
+        <h3>To work on this week:</h3>
+        <p>{{n.assign}}</p>
+        <h3>Tips</h3>
+        <p>{{n.tips}}</p>
+      </div>
+    {% endfor %}
   </div>
 {% endblock %}
