@@ -441,7 +441,6 @@ fieldset button {
 /***### STUDENT ###***/
 .studentPortal {
   margin: auto;
-  text-align: center;
   width: 80%;
 }
 
@@ -450,6 +449,20 @@ fieldset button {
   text-align: center;
 }
 
+.lessonNotes {
+  background-color: rgba(255, 108, 34, 0.15);
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.lessonNotes h3 {
+  color: rgba(255, 108, 34, 1);
+  font-family: 'Lobster';
+  margin: -1em 0 -2.5em;
+}
 
 /***### ADMIN ###***/
 .adminWrapper {
