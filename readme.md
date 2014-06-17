@@ -11,10 +11,8 @@ While this app is specifically for my teaching business, I hope to create a tool
 ### Todo
 
 * Dynamically cache content
-* Link Google Drive folders to student portal
 * Same page login with js
 * Implement better user validation
-* Make front page links live
 
 
 \- Alex
