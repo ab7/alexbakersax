@@ -1,4 +1,4 @@
-# Sax Lessons Prototype
+# Private Lesson Portal Prototype
 
 ### The Lowdown
 
