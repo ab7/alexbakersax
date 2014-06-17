@@ -59,9 +59,9 @@ def write_user(**kwargs):
 class Notes(ndb.Model):
     """Lesson note entities"""
     student = ndb.StringProperty(required = True)
-    warmup = ndb.TextProperty(required = True)
-    assign = ndb.TextProperty(required = True)
-    tips = ndb.TextProperty(required = True)
+    warmup = ndb.TextProperty(required = True, indexed=False)
+    assign = ndb.TextProperty(required = True, indexed=False)
+    tips = ndb.TextProperty(required = True, indexed=False)
     created = ndb.DateTimeProperty(auto_now_add = True)
 
 
@@ -69,8 +69,9 @@ class Students(ndb.Model):
     """Student info entities"""
     user = ndb.StringProperty(required=True)
     password  = ndb.StringProperty(indexed=False)
-    email = ndb.StringProperty()
-    name = ndb.StringProperty()
+    email = ndb.StringProperty(required = True)
+    name = ndb.StringProperty(required = True, indexed=False)
+    drive_link = ndb.StringProperty(required = True, indexed=False)
 
     @classmethod
     def by_user(cls, name):

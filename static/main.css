@@ -347,12 +347,16 @@ section > img {
   border-radius: 100px;
   border: 1px solid rgba(170, 170, 170, 0.44);
   color: #fff;
-  font: .5em Verdana;
+  cursor: pointer;
+  font: 1em Verdana;
+  padding: 4px 12px;
+  outline: none;
   width: 95%;
 }
 
 .clickHere:hover {
-  border: 1px solid #aaa;
+  border-color: #8dff96;
+  color: #8dff96;
   -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
   -moz-box-shadow:    -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
   box-shadow:         -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
@@ -386,19 +390,6 @@ td {
   width: 100%;
 }
 
-
-/* footer */
-footer {
-  text-align: center;
-}
-
-footer a {
-  color: rgba(255, 108, 34, 1);
-}
-
-footer a:visited {
-  color: rgba(255, 108, 34, 1);
-}
 
 /**## LOGIN AND SIGNUP ##**/
 .formTitle {
@@ -464,6 +455,38 @@ fieldset button {
   margin: -1em 0 -2.5em;
 }
 
+.googleDrive {
+  background-color: rgba(88, 88, 137, 0.75);
+  border-radius: 1em;
+  padding: 2em;
+  text-align: center;
+  margin: auto;
+}
+
+.driveButton {
+  display: inline-block;
+  background-color: rgb(169, 190, 198);
+  border-radius: .5em;
+  border: 1px solid rgba(136, 109, 109, 0.44);
+  color: #fff;
+  cursor: pointer;
+  font: 1em Verdana;
+  margin: 1em 1em;
+  padding: 4px 12px;
+  outline: none;
+  text-decoration: none;
+  width: 150px;
+}
+
+.driveButton:hover {
+  background-color: rgba(169, 190, 198, 0.42);
+}
+
+.driveButton:visited {
+  color: #fff;
+}
+
+
 /***### ADMIN ###***/
 .adminWrapper {
   margin: auto;
@@ -501,15 +524,25 @@ textarea {
 }
 
 
+/* footer */
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: rgba(255, 108, 34, 1);
+}
+
+footer a:visited {
+  color: rgba(255, 108, 34, 1);
+}
+
 
 /**********Media Queries**********/
 
 @media (min-width: 600px) {
   html {
     font-size: 120%;
-  }
-  header {
-    border-bottom: 8px solid rgba(255, 108, 34, 1);
   }
   #login {
     border: 3px solid rgba(255, 108, 34, 1);

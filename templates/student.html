@@ -6,6 +6,12 @@
     <nav>
       <a href="/">Home</a>|<a href="/logout">Logout</a>
     </nav>
+    <div class="googleDrive">
+      <h3>Google Drive Links</h3>
+      <p>The community folder has general resources for all students. Your folder is only accessable by you and has resources specific to our lessons.</p>
+      <a class="driveButton" href="//drive.google.com/folderview?id=0BzUQswNFP7feQVRNNmN1bGFqRmc&usp=sharing" target="_blank">Community Folder</a>
+      <a class="driveButton" href="{{drive}}" target="_blank">{{name}}'s Folder</a>
+    </div>
     {% for n in notes %}
       <div class="lessonNotes">
         <h2>Lesson Notes - {{n.created.strftime('%A %b %d, %Y')}}</h2>

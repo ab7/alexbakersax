@@ -52,8 +52,9 @@ class StudentPortal(Handler):
         notes = ds.get_notes(user_key)
         student = ds.get_student(user_key)
         first_name = student.name.split()[0]
+        drive_link = student.drive_link
         if user_key or users.is_current_user_admin():
-            self.render('student.html', name=first_name, notes=notes)
+            self.render('student.html', name=first_name, notes=notes, drive=drive_link)
         else:
             self.redirect('/')
 
@@ -111,6 +112,7 @@ class AddStudent(Handler):
         user_pw = self.request.get('password')
         verify = self.request.get('verify')
         user_email = self.request.get('email')
+        drive_link = self.request.get('drive')
         params = dict(username = user_name,
                       email = user_email)
         if not name:
@@ -131,6 +133,9 @@ class AddStudent(Handler):
         if not tools.valid_email(user_email):
             params['email_error'] = "That's not a valid email!"
             have_error = True
+        if not drive_link:
+            params['drive_error']= "Please enter Google Drive link!"
+            have_error = True
         if have_error:
             self.render('addstudent.html', **params)
         else:
@@ -139,7 +144,8 @@ class AddStudent(Handler):
                             user = user_name,
                             password = hashed_pw,
                             email = user_email,
-                            name = name
+                            name = name,
+                            drive_link = drive_link
                             )
             self.redirect('/admin')
 
