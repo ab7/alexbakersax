@@ -10,45 +10,57 @@ from google.appengine.ext import ndb
 ###   ndb convenience functions   ###
 #####################################
 
-def entries_cache(key_='top', update=False):
-    items = memcache.get(key_)
-    if items is None or update:
-        logging.error("NDB QUERY")
-        if key_.isdigit():
-            entry = Notes.get_by_id(int(key_))
-            memcache.set(key_, entry)
-            items = entry
-        else:
-            items = Notes.query().order(-Notes.created).fetch(10)
-            memcache.set(key_, items)
-        memcache.set('query_time', time.time())
-    return items
-
-
-### database retrieval convenience functions ###
+### read functions ###
 def get_all_students():
     """Returns all Students entities"""
-    return Students.query().order(Students.user)
+    students = memcache.get('students')
+    update = memcache.get('student-update')
+    if students and not update:
+        # Should always return this unless a new student is added
+        return students
+    else:
+        logging.error('NDB QUERY')
+        students = Students.query()
+        memcache.set('students', students)
+        memcache.delete('update')
+        students_by_name = students.order(Students.user)
+        return students_by_name
 
 def get_student(user_key):
     """Takes the encrypted student key and returns the student entity"""
+    students = get_all_students()
     decoded_key = ndb.Key(urlsafe=user_key)
-    return decoded_key.get()
+    student = students.filter(Students.key == decoded_key).get()
+    return student
 
 def get_notes(user_key):
     """Returns all lesson notes based on student key value"""
-    notes = Notes.query(Notes.student == user_key).order(-Notes.created)
-    return notes
+    notes = memcache.get(user_key)
+    update = memcache.get(user_key + '-update')
+    if notes and not update:
+        # Should always return this unless notes have been added
+
+        notes_by_date = notes.order(-Notes.created)
+        return notes_by_date
+    else:
+        logging.error('NDB QUERY')
+        notes = Notes.query(Notes.student == user_key)
+        memcache.set(user_key, notes)
+        memcache.delete(user_key + '-update')
+        notes_by_date = notes.order(-Notes.created)
+        return notes_by_date
 
 
-### database write convenience functions ###
+### write functions ###
 def write_notes(**kwargs):
     entry = Notes(**kwargs)
     entry.put()
+    memcache.set('notes-update', True)
     return entry
 
 def write_user(**kwargs):
     entry = Students(**kwargs)
+    memcache.set('student-update', True)
     return entry.put()
 
 
