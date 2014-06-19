@@ -15,16 +15,13 @@ def get_all_students():
     """Returns all Students entities"""
     students = memcache.get('students')
     update = memcache.get('student-update')
-    if students and not update:
-        # Should always return this unless a new student is added
-        return students
-    else:
+    if not students or update:
         logging.error('NDB QUERY')
         students = Students.query()
         memcache.set('students', students)
-        memcache.delete('update')
-        students_by_name = students.order(Students.user)
-        return students_by_name
+        memcache.delete('student-update')
+    students_by_name = students.order(Students.user)
+    return students_by_name
 
 def get_student(user_key):
     """Takes the encrypted student key and returns the student entity"""
@@ -34,29 +31,24 @@ def get_student(user_key):
     return student
 
 def get_notes(user_key):
-    """Returns all lesson notes based on student key value"""
+    """Returns all lesson notes based on student key"""
     notes = memcache.get(user_key)
     update = memcache.get(user_key + '-update')
-    if notes and not update:
-        # Should always return this unless notes have been added
-
-        notes_by_date = notes.order(-Notes.created)
-        return notes_by_date
-    else:
+    if not notes or update:
         logging.error('NDB QUERY')
-        notes = Notes.query(Notes.student == user_key)
+        notes = Notes.query()
         memcache.set(user_key, notes)
         memcache.delete(user_key + '-update')
-        notes_by_date = notes.order(-Notes.created)
-        return notes_by_date
+    student_notes = notes.filter(Notes.student == user_key)
+    notes_by_date = student_notes.order(-Notes.created)
+    return notes_by_date
 
 
 ### write functions ###
 def write_notes(**kwargs):
     entry = Notes(**kwargs)
-    entry.put()
-    memcache.set('notes-update', True)
-    return entry
+    memcache.set(entry.student + '-update', True)
+    return entry.put()
 
 def write_user(**kwargs):
     entry = Students(**kwargs)
