@@ -7,7 +7,6 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 ### Todo
 
-* Dynamically cache content
 * Same page login with js
 * Implement better user validation
 
