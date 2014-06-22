@@ -9,6 +9,9 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 * Same page login with js
 * Implement better user validation
-
+* Minimize and inline ATF css
+* Fix image sizes
+* Fix IE login css issue
+* Change materials table to divs
 
 \- Alex
