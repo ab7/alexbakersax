@@ -16,11 +16,11 @@
       <div class="lessonNotes">
         <h2>Lesson Notes - {{n.created.strftime('%A %b %d, %Y')}}</h2>
         <h3>Warmup:</h3>
-        <p>{{n.warmup}}</p>
+        <p>{{n.warmup | safe}}</p>
         <h3>To work on this week:</h3>
-        <p>{{n.assign}}</p>
+        <p>{{n.assign | safe}}</p>
         <h3>Tips:</h3>
-        <p>{{n.tips}}</p>
+        <p>{{n.tips | safe}}</p>
       </div>
     {% endfor %}
   </div>
