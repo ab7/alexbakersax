@@ -35,8 +35,7 @@ class Handler(webapp2.RequestHandler):
 
     def read_cookie(self):
         user_key = self.request.cookies.get('user_key')
-        if user_key:
-            return tools.check_secure_val(user_key)
+        return user_key and tools.check_secure_val(user_key)
 
 
 class Front(Handler):
@@ -49,14 +48,14 @@ class StudentPortal(Handler):
         user_key = self.read_cookie()
         if not user_key:
             user_key = self.request.get('key')
-        notes = ds.get_notes(user_key)
-        student = ds.get_student(user_key)
-        first_name = student.name.split()[0]
-        drive_link = student.drive_link
         if user_key or users.is_current_user_admin():
+            notes = ds.get_notes(user_key)
+            student = ds.get_student(user_key)
+            first_name = student.name.split()[0]
+            drive_link = student.drive_link
             self.render('student.html', name=first_name, notes=notes, drive=drive_link)
         else:
-            self.redirect('/')
+            self.redirect('/login')
 
 
 class Login(Handler):
@@ -97,13 +96,48 @@ class AdminPortal(Handler):
         self.render('admin.html', students=students)
 
 
+class AddNotes(Handler):
+    """===admin only access===
+
+    Validates and creates a new lesson notes entry
+    """
+    def get(self):
+        user_key = self.request.get('key')
+        student = ds.get_student(user_key)
+        self.render('addnotes.html', student=student)
+
+    def post(self):
+        student = self.request.get('key')
+        warmup = self.request.get('warmup')
+        assign = self.request.get('assign')
+        tips = self.request.get('tips')
+        if student and warmup and assign and tips:
+            notes = ds.write_notes(
+                            student = student,
+                            warmup = warmup,
+                            tips = tips,
+                            assign = assign
+                            )
+            self.redirect('/admin')
+        else:
+            error = "Please fill out all fields!"
+            self.render('addnotes.html',
+                        student = student,
+                        warmup = warmup,
+                        tips = tips,
+                        assign = assign,
+                        error = error)
+
+
 class AddStudent(Handler):
     """===admin only access===
 
     Validates and creates a new student entity
     """
     def get(self):
-        self.render('addstudent.html')
+        title = "New Student Signup"
+        button_text = "Create"
+        self.render('addstudent.html', title = title, button_text = button_text)
 
     def post(self):
         have_error = False
@@ -150,37 +184,75 @@ class AddStudent(Handler):
             self.redirect('/admin')
 
 
-class AddNotes(Handler):
+class EditStudent(Handler):
     """===admin only access===
 
-    Validates and creates a new lesson notes entry
+    Edit a student entity
     """
     def get(self):
-        user_key = self.request.get('key')
-        student = ds.get_student(user_key)
-        self.render('addnotes.html', student=student)
+        if users.is_current_user_admin():
+            title = "Edit Student Info"
+            button_text = "Update"
+            user_key = self.request.get('key')
+            student = ds.get_student(user_key)
+            self.render(
+                    'addstudent.html',
+                    title = title,
+                    button_text = button_text,
+                    name = student.name,
+                    username = student.user,
+                    password = 'noupdate',
+                    email = student.email,
+                    drive = student.drive_link
+                    )
+        else:
+            self.redirect('/')
 
     def post(self):
-        student = self.request.get('key')
-        warmup = self.request.get('warmup')
-        assign = self.request.get('assign')
-        tips = self.request.get('tips')
-        if student and warmup and assign and tips:
-            notes = ds.write_notes(
-                                student = student,
-                                warmup = warmup,
-                                tips = tips,
-                                assign = assign
-                                )
-            self.redirect('/admin')
+        have_error = False
+        pw = None
+        pe = ""
+        ve = ""
+        user_key = self.request.get('key')
+        name = self.request.get('name')
+        user_name = self.request.get('username')
+        user_pw = self.request.get('password')
+        verify = self.request.get('verify')
+        user_email = self.request.get('email')
+        drive_link = self.request.get('drive')
+
+        if user_pw != 'noupdate' or verify != 'noupdate':
+            if not tools.valid_password(user_pw):
+                have_error = True
+                pe = "Thats not a valid password!"
+            elif user_pw != verify:
+                have_error = True
+                ve = "Passwords do not match!"
+            else:
+                hashed_pw = tools.password_protect(user_pw)
+                pw = hashed_pw
+
+        if have_error:
+            self.render(
+                    'addstudent.html',
+                    name = name,
+                    username = user_name,
+                    password = 'noupdate',
+                    email = user_email,
+                    drive = drive_link,
+                    password_error = pe,
+                    verify_error = ve
+                    )
         else:
-            error = "Please fill out all fields!"
-            self.render('addnotes.html',
-                        student = student,
-                        warmup = warmup,
-                        tips = tips,
-                        assign = assign,
-                        error = error)
+            ds.edit_user(
+                    user_key,
+                    pw,
+                    user = user_name,
+                    email = user_email,
+                    name = name,
+                    drive_link = drive_link
+                    )
+            self.redirect('/admin')
 
 
 app = webapp2.WSGIApplication([
@@ -190,5 +262,6 @@ app = webapp2.WSGIApplication([
                         ('/login', Login),
                         ('/logout', Logout),
                         ('/student', StudentPortal),
-                        ('/admin', AdminPortal)
+                        ('/admin', AdminPortal),
+                        ('/editstudent', EditStudent)
                         ], debug=True)

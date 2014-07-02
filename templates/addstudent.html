@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 class="formTitle">New Student Signup</h2>
+    <h2 class="formTitle">{{title}}</h2>
     <fieldset>
       <form method="post">
         <label>
@@ -16,12 +16,12 @@
         <div class="error">{{username_error}}</div>
         <label>
           Password
-          <input type="password" name="password" value="" required>
+          <input type="password" name="password" value="{{password}}" required>
         </label>
         <div class="error">{{password_error}}</div>
         <label>
           Verify Password
-          <input type="password" name="verify" value="" required>
+          <input type="password" name="verify" value="{{password}}" required>
         </label>
         <div class="error">{{verify_error}}</div>
         <label>
@@ -35,7 +35,7 @@
         </label>
         <div class="error">{{drive_error}}</div>
         <button>
-          Create
+          {{button_text}}
         </button>
       </form>
     </fieldset>

@@ -55,6 +55,18 @@ def write_user(**kwargs):
     memcache.set('student-update', True)
     return entry.put()
 
+def edit_user(user_key, pw, user, email, name, drive_link):
+    student = get_student(user_key)
+    student.user = user
+    student.email = email
+    student.name = name
+    student.drive_link = drive_link
+    if pw:
+        student.password = pw
+    memcache.set('student-update', True)
+    return student.put()
+
+
 
 ######################
 ###   ndb models   ###

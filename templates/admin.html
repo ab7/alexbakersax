@@ -17,6 +17,9 @@
         <span class="studentCell">
           {{s.email}}
         </span>
+        <span class="studentCell">
+          <a href="/editstudent?key={{s.key.urlsafe()}}">edit</a>
+        </span>
       </div>
     {% endfor %}
   </div>
