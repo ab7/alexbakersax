@@ -45,15 +45,19 @@ class Front(Handler):
 
 class StudentPortal(Handler):
     def get(self):
+        admin = users.is_current_user_admin()
         user_key = self.read_cookie()
         if not user_key:
             user_key = self.request.get('key')
-        if user_key or users.is_current_user_admin():
+        if user_key or admin:
             notes = ds.get_notes(user_key)
             student = ds.get_student(user_key)
             first_name = student.name.split()[0]
             drive_link = student.drive_link
-            self.render('student.html', name=first_name, notes=notes, drive=drive_link)
+            edit_note = ""
+            if admin:
+                edit_note = "<a href='/editnote?q={{n.key}}'>edit</a>" # start here
+            self.render('student.html', name=first_name, notes=notes, drive=drive_link, edit_note=edit_note)
         else:
             self.redirect('/login')
 

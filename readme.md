@@ -9,11 +9,10 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 * Same page login with js
 * Fix image sizes
-* Fix IE login css issue
-* Fix admin console css
 * Change materials table to divs
 * Edit notes
 * Check out ATF optimization
 * Modular note options
+* modernizer?
 
 \- Alex
