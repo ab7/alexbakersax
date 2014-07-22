@@ -21,8 +21,16 @@
         <p>{{n.assign | safe}}</p>
         <h3>Tips:</h3>
         <p>{{n.tips | safe}}</p>
-        {{edit_note | safe}}
+        <a class="hide" href='/editnote?%q={{n.key.urlsafe()}}'>edit</a>
       </div>
     {% endfor %}
   </div>
+  <script>
+    hidden = document.getElementsByClassName('hide');
+    if ({{admin}}) {
+      for (var i = 0; i < hidden.length; i++) {
+        hidden[i].className = 'show';
+      }
+    }
+  </script>
 {% endblock %}

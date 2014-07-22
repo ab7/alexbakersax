@@ -530,6 +530,13 @@ textarea {
   width: 90%;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
 
 /* footer */
 footer {

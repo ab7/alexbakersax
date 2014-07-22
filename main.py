@@ -1,5 +1,6 @@
 import os
 import logging
+import json
 
 import webapp2
 import jinja2
@@ -54,39 +55,9 @@ class StudentPortal(Handler):
             student = ds.get_student(user_key)
             first_name = student.name.split()[0]
             drive_link = student.drive_link
-            edit_note = ""
-            if admin:
-                edit_note = "<a href='/editnote?q={{n.key}}'>edit</a>" # start here
-            self.render('student.html', name=first_name, notes=notes, drive=drive_link, edit_note=edit_note)
+            self.render('student.html', name=first_name, notes=notes, drive=drive_link, admin=json.dumps(admin))
         else:
             self.redirect('/login')
-
-
-class Login(Handler):
-    def get(self):
-        user_key = self.read_cookie()
-        if user_key:
-            self.redirect('/student')
-        else:
-            self.render('login.html')
-
-    def post(self):
-        user_name = self.request.get('username')
-        user_pw = self.request.get('password')
-        user_entry = ds.Students.by_user(user_name).get()
-        if user_entry:
-            user_key = user_entry.key.urlsafe()
-            hashed = user_entry.password
-            if tools.bcrypt.hashpw(user_pw, hashed) == hashed:
-                self.make_cookie('user_key', user_key)
-                self.redirect('/student')
-        self.render('login.html', login_error='Invalid Login')
-
-
-class Logout(Handler):
-    def get(self):
-        self.response.delete_cookie('user_key')
-        self.redirect('/')
 
 
 class AdminPortal(Handler):
@@ -98,39 +69,6 @@ class AdminPortal(Handler):
     def get(self):
         students = ds.get_all_students()
         self.render('admin.html', students=students)
-
-
-class AddNotes(Handler):
-    """===admin only access===
-
-    Validates and creates a new lesson notes entry
-    """
-    def get(self):
-        user_key = self.request.get('key')
-        student = ds.get_student(user_key)
-        self.render('addnotes.html', student=student)
-
-    def post(self):
-        student = self.request.get('key')
-        warmup = self.request.get('warmup')
-        assign = self.request.get('assign')
-        tips = self.request.get('tips')
-        if student and warmup and assign and tips:
-            notes = ds.write_notes(
-                            student = student,
-                            warmup = warmup,
-                            tips = tips,
-                            assign = assign
-                            )
-            self.redirect('/admin')
-        else:
-            error = "Please fill out all fields!"
-            self.render('addnotes.html',
-                        student = student,
-                        warmup = warmup,
-                        tips = tips,
-                        assign = assign,
-                        error = error)
 
 
 class AddStudent(Handler):
@@ -194,24 +132,20 @@ class EditStudent(Handler):
     Edit a student entity
     """
     def get(self):
-        if users.is_current_user_admin():
-            title = "Edit Student Info"
-            button_text = "Update"
-            user_key = self.request.get('key')
-            student = ds.get_student(user_key)
-            self.render(
-                    'addstudent.html',
-                    title = title,
-                    button_text = button_text,
-                    name = student.name,
-                    username = student.user,
-                    password = 'noupdate',
-                    email = student.email,
-                    drive = student.drive_link
-                    )
-        else:
-            self.redirect('/')
-
+        title = "Edit Student Info"
+        button_text = "Update"
+        user_key = self.request.get('key')
+        student = ds.get_student(user_key)
+        self.render(
+                'addstudent.html',
+                title = title,
+                button_text = button_text,
+                name = student.name,
+                username = student.user,
+                password = 'noupdate',
+                email = student.email,
+                drive = student.drive_link
+                )
     def post(self):
         have_error = False
         pw = None
@@ -259,13 +193,86 @@ class EditStudent(Handler):
             self.redirect('/admin')
 
 
+class AddNotes(Handler):
+    """===admin only access===
+
+    Validates and creates a new lesson notes entry
+    """
+    def get(self):
+        user_key = self.request.get('key')
+        student = ds.get_student(user_key)
+        self.render('addnotes.html', student=student)
+
+    def post(self):
+        student = self.request.get('key')
+        warmup = self.request.get('warmup')
+        assign = self.request.get('assign')
+        tips = self.request.get('tips')
+        if student and warmup and assign and tips:
+            notes = ds.write_notes(
+                            student = student,
+                            warmup = warmup,
+                            tips = tips,
+                            assign = assign
+                            )
+            self.redirect('/admin')
+        else:
+            error = "Please fill out all fields!"
+            self.render('addnotes.html',
+                        student = student,
+                        warmup = warmup,
+                        tips = tips,
+                        assign = assign,
+                        error = error)
+
+
+class EditNote(Handler):
+    """===admin only access===
+
+    Edit a specific lesson notes entry
+    """
+    def get(self):
+
+        self.render('addnotes.html')
+
+
+class Login(Handler):
+    def get(self):
+        user_key = self.read_cookie()
+        if user_key:
+            self.redirect('/student')
+        else:
+            self.render('login.html')
+
+    def post(self):
+        user_name = self.request.get('username')
+        user_pw = self.request.get('password')
+        user_entry = ds.Students.by_user(user_name).get()
+        if user_entry:
+            user_key = user_entry.key.urlsafe()
+            hashed = user_entry.password
+            if tools.bcrypt.hashpw(user_pw, hashed) == hashed:
+                self.make_cookie('user_key', user_key)
+                self.redirect('/student')
+        self.render('login.html', login_error='Invalid Login')
+
+
+class Logout(Handler):
+    def get(self):
+        self.response.delete_cookie('user_key')
+        self.redirect('/')
+
+
+
+
 app = webapp2.WSGIApplication([
                         ('/', Front),
-                        ('/addnotes', AddNotes),
-                        ('/addstudent', AddStudent),
-                        ('/login', Login),
-                        ('/logout', Logout),
                         ('/student', StudentPortal),
                         ('/admin', AdminPortal),
-                        ('/editstudent', EditStudent)
+                        ('/addstudent', AddStudent),
+                        ('/editstudent', EditStudent),
+                        ('/addnotes', AddNotes),
+                        ('/editnote', EditNote),
+                        ('/login', Login),
+                        ('/logout', Logout)
                         ], debug=True)

@@ -25,7 +25,15 @@ handlers:
   script: main.app
   login: admin
 
+- url: /editstudent
+  script: main.app
+  login: admin
+
 - url: /addnotes
+  script: main.app
+  login: admin
+
+- url: /editnote
   script: main.app
   login: admin
 
