@@ -26,9 +26,10 @@
     {% endfor %}
   </div>
   <script>
+    var hidden, i;
     hidden = document.getElementsByClassName('hide');
     if ({{admin}}) {
-      for (var i = 0; i < hidden.length; i++) {
+      for (i = hidden.length - 1; i >=0; --i) {
         hidden[i].className = 'show';
       }
     }
