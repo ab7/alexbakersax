@@ -53,9 +53,8 @@ class StudentPortal(Handler):
         if user_key or admin:
             notes = ds.get_notes(user_key)
             student = ds.get_student(user_key)
-            first_name = student.name.split()[0]
             drive_link = student.drive_link
-            self.render('student.html', name=first_name, notes=notes, drive=drive_link, admin=json.dumps(admin))
+            self.render('student.html', student=student, notes=notes, drive=drive_link, admin=json.dumps(admin))
         else:
             self.redirect('/login')
 
@@ -210,20 +209,22 @@ class AddNotes(Handler):
         tips = self.request.get('tips')
         if student and warmup and assign and tips:
             notes = ds.write_notes(
-                            student = student,
-                            warmup = warmup,
-                            tips = tips,
-                            assign = assign
-                            )
-            self.redirect('/admin')
-        else:
-            error = "Please fill out all fields!"
-            self.render('addnotes.html',
                         student = student,
                         warmup = warmup,
                         tips = tips,
-                        assign = assign,
-                        error = error)
+                        assign = assign
+                        )
+            self.redirect('/admin')
+        else:
+            error = "Please fill out all fields!"
+            self.render(
+                'addnotes.html',
+                student = student,
+                warmup = warmup,
+                tips = tips,
+                assign = assign,
+                error = error
+                )
 
 
 class EditNote(Handler):
@@ -232,8 +233,43 @@ class EditNote(Handler):
     Edit a specific lesson notes entry
     """
     def get(self):
+        note_key = self.request.get('q')
+        user_key = self.request.get('s')
+        note = ds.get_single_note(user_key, note_key)
+        student = ds.get_student(user_key)
+        self.render(
+            'addnotes.html',
+            student = student,
+            warmup = note.warmup,
+            assign = note.assign,
+            tips = note.tips
+        )
 
-        self.render('addnotes.html')
+    def post(self):
+        note_key = self.request.get('q')
+        student = self.request.get('s')
+        warmup = self.request.get('warmup')
+        assign = self.request.get('assign')
+        tips = self.request.get('tips')
+        if student and warmup and assign and tips:
+            notes = ds.edit_note(
+                        note_key = note_key,
+                        student = student,
+                        warmup = warmup,
+                        tips = tips,
+                        assign = assign
+                        )
+            self.redirect('/admin')
+        else:
+            error = "Please fill out all fields!"
+            self.render(
+                'addnotes.html',
+                student = student,
+                warmup = warmup,
+                tips = tips,
+                assign = assign,
+                error = error
+                )
 
 
 class Login(Handler):

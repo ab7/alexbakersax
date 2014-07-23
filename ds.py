@@ -43,6 +43,12 @@ def get_notes(user_key):
     notes_by_date = student_notes.order(-Notes.created)
     return notes_by_date
 
+def get_single_note(user_key, note_key):
+    decoded_key = ndb.Key(urlsafe=note_key)
+    all_notes = get_notes(user_key)
+    note = all_notes.filter(Notes.key == decoded_key).get()
+    return note
+
 
 ### write functions ###
 def write_notes(**kwargs):
@@ -65,6 +71,14 @@ def edit_user(user_key, pw, user, email, name, drive_link):
         student.password = pw
     memcache.set('student-update', True)
     return student.put()
+
+def edit_note(note_key, student, warmup, assign, tips):
+    note = get_single_note(student, note_key)
+    note.warmup = warmup
+    note.assign = assign
+    note.tips = tips
+    memcache.set(student + '-update', True)
+    return note.put()
 
 
 

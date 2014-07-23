@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="studentPortal">
-    <h2>Welcome {{name}}!</h2>
+    <h2>Welcome {{student.name.split()[0]}}!</h2>
     <nav>
       <a href="/">Home</a>|<a href="/logout">Logout</a>
     </nav>
@@ -21,7 +21,7 @@
         <p>{{n.assign | safe}}</p>
         <h3>Tips:</h3>
         <p>{{n.tips | safe}}</p>
-        <a class="hide" href='/editnote?%q={{n.key.urlsafe()}}'>edit</a>
+        <a class="hide" href='/editnote?q={{n.key.urlsafe()}}&s={{student.key.urlsafe()}}'>edit</a>
       </div>
     {% endfor %}
   </div>
