@@ -6,14 +6,26 @@
     <form method="post">
       <label>
         <div>Warm Up:</div>
+        <div class="lastLesson">
+          <div>Last Lesson</div>
+          {{warmup_prev}}
+        </div>
         <textarea name="warmup">{{warmup}}</textarea>
       </label>
       <label>
         <div>To work on this week:</div>
+        <div class="lastLesson">
+          <div>Last Lesson</div>
+          {{assign_prev}}
+        </div>
         <textarea name="assign">{{assign}}</textarea>
       </label>
       <label>
         <div>Tips:</div>
+        <div class="lastLesson">
+          <div>Last Lesson</div>
+          {{tips_prev}}
+        </div>
         <textarea name="tips">{{tips}}</textarea>
       </label>
       <div class="error">{{error}}</div>

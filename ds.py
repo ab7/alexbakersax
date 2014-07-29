@@ -49,6 +49,10 @@ def get_single_note(user_key, note_key):
     note = all_notes.filter(Notes.key == decoded_key).get()
     return note
 
+def get_latest_notes(user_key):
+    all_notes = get_notes(user_key)
+    return all_notes.fetch(1)[0]
+
 
 ### write functions ###
 def write_notes(**kwargs):

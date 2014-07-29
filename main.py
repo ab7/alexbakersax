@@ -88,8 +88,11 @@ class AddStudent(Handler):
         verify = self.request.get('verify')
         user_email = self.request.get('email')
         drive_link = self.request.get('drive')
-        params = dict(username = user_name,
-                      email = user_email)
+        params = dict(name = name,
+                      username = user_name,
+                      email = user_email,
+                      drive = drive_link,
+                      button_text = "Create")
         if not name:
             params['name_error']= "Please enter a name!"
             have_error = True
@@ -200,7 +203,13 @@ class AddNotes(Handler):
     def get(self):
         user_key = self.request.get('key')
         student = ds.get_student(user_key)
-        self.render('addnotes.html', student=student)
+        latest_notes = ds.get_latest_notes(user_key)
+        self.render(
+            'addnotes.html',
+            student = student,
+            warmup_prev = latest_notes.warmup,
+            assign_prev = latest_notes.assign,
+            tips_prev = latest_notes.tips)
 
     def post(self):
         student = self.request.get('key')
