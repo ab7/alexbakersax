@@ -527,12 +527,17 @@ fieldset button {
   font-size: 0.7em;
   margin: 15px 0;
   padding: 15px;
+  white-space: pre-wrap;
 }
 
 .lastLesson div {
   color: rgba(255, 108, 34, 0.57);
   font: bold 1.2em Verdana;
-  margin: 5px 0;
+  margin: -40px 0;
+}
+
+.lastLesson p {
+  margin: 5px 0 -40px;
 }
 
 #notesEntry {
