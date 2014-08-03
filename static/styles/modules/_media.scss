@@ -1,0 +1,61 @@
+// media queries
+
+@media (min-width: 600px) {
+  html {
+    font-size: 120%;
+  }
+  #login {
+    border: 3px solid rgba(255, 108, 34, 1);
+    height: 100px;
+    width: 100px;
+    top: -130px;
+  }
+  img {
+    width: 13em;
+  }
+  #alexPic{
+    width: 9em;
+  }
+  #materialsWrapper, #vidWrapper {
+    box-sizing: border-box;
+    float: left;
+    width: 48%;
+  }
+  #vidWrapper {
+    margin-left: 4%;
+  }
+  #vidWrapper h2 {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 140%;
+  }
+  #main {
+    float: left;
+    width: 59%;
+  }
+  .firstTimers {
+    float: right;
+    font-size: 76%;
+    margin-top: -1em;
+    width: 35%;
+  }
+  #materialsWrapper {
+    float: none;
+    width: 100%;
+  }
+  .materialPic {
+    width: 3em;
+  }
+  #vidWrapper {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  #login {
+    top: -144px;
+  }
+}

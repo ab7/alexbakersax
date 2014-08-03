@@ -1,0 +1,78 @@
+// admin pages
+.adminWrapper {
+  margin: auto;
+  width: 90%;
+}
+
+.adminWrapper h2, .adminWrapper nav {
+  padding: .3em;
+  text-align: center;
+}
+
+.studentInfo {
+  border: 1px solid black;
+  border-radius: 1em;
+  font-size: .8em;
+  display: block;
+  margin: .2em auto;
+  max-width: 700px;
+}
+
+.studentCell {
+  display: inline-block;
+  padding: .2em .3em;
+  text-align: center;
+  width: 32%;
+}
+
+
+// lesson notes entry
+.lastLesson {
+  background-color: rgba(255, 108, 34, 0.21);
+  border-radius: 10px;
+  font-size: 0.7em;
+  margin: 15px 0;
+  padding: 15px;
+  white-space: pre-wrap;
+}
+
+.lastLesson div {
+  color: rgba(255, 108, 34, 0.57);
+  font: bold 1.2em Verdana;
+  margin: -40px 0;
+}
+
+.lastLesson p {
+  margin: 5px 0 -40px;
+}
+
+#notesEntry {
+  width: 90%;
+}
+
+textarea {
+  height: 8em;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+// footer
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: rgba(255, 108, 34, 1);
+}
+
+footer a:visited {
+  color: rgba(255, 108, 34, 1);
+}
