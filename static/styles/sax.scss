@@ -1,4 +1,5 @@
 // colors
+$mainColor: rgba(255, 108, 34, 1);
 $saxMainColor: #e6ba40;
 $saxKeyColor: rgba(253, 218, 143, 0.54);
 $saxPearlColor: rgb(255, 248, 240);
@@ -13,7 +14,9 @@ $armWidth: 20px;
 
 
 // positions
-$keyPos: 5em;
+$keyPosR: 9.5em;
+$keyPosT: 2em;
+$armLen: 2.5em;
 
 
 // main styles
@@ -22,14 +25,15 @@ body, html {
 }
 
 header {
+  margin-bottom: 2em;
   padding: 11px;
 }
 
 .saxBody {
   background-color: $saxMainColor;
+  color: $mainColor;
   height: 100%;
   max-width: 300px;
-  padding-bottom: 10em;
 }
 
 .saxRod {
@@ -39,6 +43,10 @@ header {
   width: $armWidth;
 }
 
+.buttonText {
+  padding-top: 35%;
+  text-align: center;
+}
 
 // alt key
 .altKey {
@@ -51,8 +59,8 @@ header {
   border-radius: 100%;
   height: $bigKey;
   position: absolute;
-  right: $keyPos + 2.8;
-  top: -12.3em;
+  right: $keyPosR + 1;
+  top: $keyPosT - 15;
   width: $bigKey;
 }
 
@@ -67,10 +75,10 @@ header {
 .bKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 11em;
+  height: 9em;
   position: absolute;
-  right: 4em;
-  width: 11em;
+  right: $keyPosR - 2;
+  width: 9em;
 }
 
 .bKeyPearl {
@@ -79,8 +87,8 @@ header {
   border-radius: 100%;
   height: $bigKey;
   position: absolute;
-  right: $keyPos - 1;
-  top: 5em;
+  right: $keyPosR - 3;
+  top: $keyPosT + 2;
   width: $bigKey;
 }
 
@@ -88,25 +96,26 @@ header {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
-  top: 5em;
-  width: 9em;
+  top: $keyPosT + 2.3;
+  width: $armLen + 3.3;
 }
 
 
 // bis key
 .bisKey {
   height: 10em;
-  margin-top: 1.3em;
+  margin-top: 2em;
   position: relative;
 }
 
 .bisKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 10em;
+  height: 8em;
   position: absolute;
-  right: 4em;
-  width: 10em;
+  right: $keyPosR - 2.7;
+  top: $keyPosT - 3.7;
+  width: 8em;
 }
 
 .bisKeyPearl {
@@ -115,8 +124,8 @@ header {
   border-radius: 100%;
   height: $smallKey;
   position: absolute;
-  right: $keyPos - 1;
-  top: -1em;
+  right: $keyPosR - 3.7;
+  top: $keyPosT - 5;
   width: $smallKey;
 }
 
@@ -124,14 +133,13 @@ header {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
-  top: 4.5em;
-  width: 9em;
+  top: $keyPosT;
+  width: $armLen + 5.5;
 }
 
 
 // a key
 .aKey {
-  height: 6em;
   margin-top: 1.3em;
   position: relative;
 }
@@ -142,8 +150,8 @@ header {
   border-radius: 100%;
   height: $bigKey;
   position: absolute;
-  right: $keyPos - 2;
-  top: -7.8em;
+  right: $keyPosR - 4;
+  top: $keyPosT - 11.5;
   width: $bigKey;
 }
 
@@ -151,25 +159,24 @@ header {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
-  top: -4.7em;
-  width: 11em;
+  top: $keyPosT - 9;
+  width: $armLen + 5;
 }
 
 
 // a key
 .gKey {
-  margin-top: 1.3em;
   position: relative;
 }
 
 .gKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 10em;
+  height: 9em;
   position: absolute;
   right: 4em;
-  top: -6em;
-  width: 10em;
+  top: $keyPosT - 4;
+  width: 9em;
 }
 
 .gKeyPearl {
@@ -178,8 +185,8 @@ header {
   border-radius: 100%;
   height: $bigKey;
   position: absolute;
-  right: $keyPos - 4.5;
-  top: -9em;
+  right: $keyPosR - 8;
+  top: $keyPosT - 6;
   width: $bigKey;
 }
 
@@ -187,14 +194,14 @@ header {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
-  top: -6.5em;
-  width: 13em;
+  top: $keyPosT - 4;
+  width: $armLen + 11;
 }
 
 .gMainArm {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
-  top: -1.7em;
-  width: 10em;
+  top: $keyPosT;
+  width: $armLen + 7.5;
 }
