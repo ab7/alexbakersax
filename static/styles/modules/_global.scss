@@ -1,0 +1,15 @@
+// fonts
+$titleFont: 'Lobster';
+$buttonFont: 'Righteous';
+
+// colors
+$mainColor: rgba(255, 108, 34, 1);
+
+// base styles
+a, a:visited {
+  color: $mainColor;
+}
+
+fieldset {
+  max-width: 380px;
+}

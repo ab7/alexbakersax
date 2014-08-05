@@ -1,44 +1,20 @@
-// fonts
-$titleFont: "Lobster";
-
-
-// colors
-$mainColor: rgba(255, 108, 34, 1);
-
-
 // front page
-h1 {
-  color: #fff;
-  font-family: $titleFont;
-  font-size: 3.8em;
-  margin: 0;
-  text-shadow: 3px 2px 0px rgba(255, 108, 34, 1);
+.textBox {
+  height: 25px;
+  width: 250px;
 }
 
-h1 a, h1 a:visited {
-  color: #fff;
-  text-decoration: none;
+.interestText {
+  @extend .textBox;
 }
 
-#login {
-  background-color: rgba(255, 108, 34, 1);
-  border: 2px solid rgba(255, 108, 34, 1);
-  border-radius: 100%;
-  color: #fff;
-  font-family: 'Lobster';
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  outline: none;
-  top: -110px;
-  right: 25%;
+.liveText {
+  @extend .textBox;
 }
 
-#login:hover {
-  color: #8dff96;
-  border-color: #8dff96;
+.rightText {
+  @extend .textBox;
 }
-
 
 // content styles
 .mainWrapper {

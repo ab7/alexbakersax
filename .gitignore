@@ -1,3 +1,6 @@
 .DS_Store
 *.pyc
 tools/config.py
+config.rb
+.sass-cache/
+old_files/
