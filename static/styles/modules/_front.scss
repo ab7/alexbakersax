@@ -1,7 +1,22 @@
-// front page
+// main styles
+.hello {
+  padding: 15px;
+
+  img {
+    @include box-shadow(-3px, 3px, 0, 0, $mainColor);
+    border-radius: 15px;
+    width: 100%;
+  }
+}
+
+
+// questions
 .textBox {
-  height: 25px;
-  width: 250px;
+  color: $secondaryColor;
+  font: 1.2em $buttonFont;
+  height: 50px;
+  padding-top: 12px;
+  width: 100%;
 }
 
 .interestText {
@@ -10,124 +25,15 @@
 
 .liveText {
   @extend .textBox;
+  text-align: right;
 }
 
 .rightText {
   @extend .textBox;
 }
 
-// content styles
-.mainWrapper {
-  max-width: 1170px;
-  margin: auto;
-  position: relative;
-}
 
-section {
-  padding: 1em;
-  margin-top: -2em;
-}
-
-h2 {
-  font-family: "Raleway";
-  margin-bottom: -.4em;
-  margin-top: 0;
-  text-shadow: 1px 1px 0px rgba(255, 108, 34, 1);
-}
-
-section > img {
-  float: left;
-  margin-right: 1em;
-  width: 11em;
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-}
-
-#alexPic {
-  margin-top: 10px;
-  width: 8em;
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, .5);
-}
-
-
-// first time section
-.firstTimers {
-  background-color: rgba(255, 108, 34, 0.53);
-  border-radius: 2em;
-  margin: 0.8em;
-  padding: 1.5em;
-}
-
-.firstTimers p {
-  margin-left: 0;
-}
-
-.materialGrid {
-  margin-top: 15px;
-  min-width: 100%;
-}
-
-.materialPic {
-  width: 2.5em;
-}
-
-.descripCell {
-  width: 80%;
-}
-
-.altoTenor {
-  background-color: rgba(255, 108, 34, 1);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-}
-
-.clickHere {
-  background-color: rgb(199, 64, 0);
-  border-radius: 100px;
-  border: 1px solid rgba(170, 170, 170, 0.44);
-  color: #fff;
-  cursor: pointer;
-  font: 1em Verdana;
-  padding: 4px 12px;
-  outline: none;
-  width: 95%;
-}
-
-.clickHere:hover {
-  border-color: #8dff96;
-  color: #8dff96;
-  -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  -moz-box-shadow:    -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  box-shadow:         -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-}
-
-.cellColor {
-  background-color: rgba(255, 108, 34, 0.27);
-}
-
-.appCell {
-  background-color: rgba(255, 108, 34, 1);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-}
-
-th {
-  background-color: rgba(255, 108, 34, 0.62);
-  font-family: "Raleway";
-  padding: 1%;
-}
-
-td {
-  font-size: .7em;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-
-// videos
-.vidHolder {
-  height: 210px;
-  margin-top: 1em;
-  width: 100%;
+// contact
+.contactFront {
+  background-color: $mainColor;
 }

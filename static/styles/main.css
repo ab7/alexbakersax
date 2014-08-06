@@ -265,59 +265,74 @@ th {
   padding: 0;
 }
 
-/* line 9, modules/_global.scss */
+/* line 14, modules/_global.scss */
 a, a:visited {
   color: #ff6c22;
 }
 
-/* line 13, modules/_global.scss */
+/* line 18, modules/_global.scss */
 fieldset {
   max-width: 380px;
 }
 
 /* line 22, modules/_base.scss */
 body, html {
-  height: 740px;
+  background-color: #c70230;
+  height: 100%;
 }
 
-/* line 26, modules/_base.scss */
-header {
-  margin-bottom: 3em;
-  padding: 11px;
+/* line 27, modules/_base.scss */
+.title {
+  background-color: #ffa622;
+  padding: 15px;
+  max-width: 350px;
+  width: 75%;
 }
 
-/* line 31, modules/_base.scss */
+/* line 34, modules/_base.scss */
+.title2 {
+  margin-top: -1.5em;
+  max-width: 430px;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* line 41, modules/_base.scss */
 h1 {
   color: #fff;
   font-family: "Lobster";
   font-size: 3.8em;
   margin: 0;
-  text-shadow: 3px 2px 0px #ff6c22;
+  text-shadow: 3px 2px 0px #c70230;
 }
 
-/* line 39, modules/_base.scss */
+/* line 49, modules/_base.scss */
 h1 a, h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 44, modules/_base.scss */
+/* line 54, modules/_base.scss */
 .saxBody {
-  background-color: #e6ba40;
-  color: #ff6c22;
+  background-color: #ffa622;
+  color: #c70230;
   height: 100%;
-  max-width: 300px;
+  margin-top: -3.3em;
+  max-width: 350px;
+  padding-top: 1em;
+  width: 75%;
 }
 
-/* line 51, modules/_base.scss */
+/* line 64, modules/_base.scss */
 .saxRod {
-  background-color: #deb53c;
+  background-color: #d98302;
   float: left;
-  height: 430px;
+  height: 100%;
+  padding-top: 3em;
   width: 20px;
 }
 
-/* line 58, modules/_base.scss */
+/* line 72, modules/_base.scss */
 .pearl, .altKeyPearl, .bKeyPearl, .bisKeyPearl, .aKeyPearl, .gKeyPearl {
   background-color: #fff8f0;
   border: 3px solid #b78d20;
@@ -326,12 +341,12 @@ h1 a, h1 a:visited {
   position: absolute;
 }
 
-/* line 68, modules/_base.scss */
+/* line 82, modules/_base.scss */
 .altKey {
   position: relative;
 }
 
-/* line 72, modules/_base.scss */
+/* line 86, modules/_base.scss */
 .altKeyPearl {
   height: 6em;
   right: 10.5em;
@@ -339,24 +354,24 @@ h1 a, h1 a:visited {
   width: 6em;
 }
 
-/* line 82, modules/_base.scss */
+/* line 96, modules/_base.scss */
 .bKey {
   height: 11em;
   margin-top: 1.3em;
   position: relative;
 }
 
-/* line 88, modules/_base.scss */
+/* line 102, modules/_base.scss */
 .bKeyMain {
   background-color: rgba(253, 218, 143, 0.54);
   border-radius: 100%;
   height: 9em;
   position: absolute;
-  right: 7.5em;
+  right: 6.5em;
   width: 9em;
 }
 
-/* line 97, modules/_base.scss */
+/* line 111, modules/_base.scss */
 .bKeyPearl {
   height: 6em;
   right: 6.5em;
@@ -364,23 +379,24 @@ h1 a, h1 a:visited {
   width: 6em;
 }
 
-/* line 105, modules/_base.scss */
+/* line 119, modules/_base.scss */
 .bKeyArm {
-  background-color: #deb53c;
+  background-color: #d98302;
   height: 20px;
   position: absolute;
+  right: 12.5em;
   top: 4.3em;
-  width: 5.8em;
+  width: 100%;
 }
 
-/* line 115, modules/_base.scss */
+/* line 130, modules/_base.scss */
 .bisKey {
   height: 10em;
   margin-top: 2em;
   position: relative;
 }
 
-/* line 121, modules/_base.scss */
+/* line 136, modules/_base.scss */
 .bisKeyMain {
   background-color: rgba(253, 218, 143, 0.54);
   border-radius: 100%;
@@ -391,7 +407,7 @@ h1 a, h1 a:visited {
   width: 8em;
 }
 
-/* line 131, modules/_base.scss */
+/* line 146, modules/_base.scss */
 .bisKeyPearl {
   height: 4em;
   right: 5.8em;
@@ -399,22 +415,23 @@ h1 a, h1 a:visited {
   width: 4em;
 }
 
-/* line 139, modules/_base.scss */
+/* line 154, modules/_base.scss */
 .bisKeyArm {
-  background-color: #deb53c;
+  background-color: #d98302;
   height: 20px;
   position: absolute;
+  right: 11.5em;
   top: 2em;
-  width: 8em;
+  width: 100%;
 }
 
-/* line 149, modules/_base.scss */
+/* line 165, modules/_base.scss */
 .aKey {
   margin-top: 1.3em;
   position: relative;
 }
 
-/* line 154, modules/_base.scss */
+/* line 170, modules/_base.scss */
 .aKeyPearl {
   height: 6em;
   right: 5.5em;
@@ -422,21 +439,22 @@ h1 a, h1 a:visited {
   width: 6em;
 }
 
-/* line 162, modules/_base.scss */
+/* line 178, modules/_base.scss */
 .aKeyArm {
-  background-color: #deb53c;
+  background-color: #d98302;
   height: 20px;
   position: absolute;
+  right: 11.2em;
   top: -7em;
-  width: 7.5em;
+  width: 100%;
 }
 
-/* line 172, modules/_base.scss */
+/* line 189, modules/_base.scss */
 .gKey {
   position: relative;
 }
 
-/* line 176, modules/_base.scss */
+/* line 193, modules/_base.scss */
 .gKeyMain {
   background-color: rgba(253, 218, 143, 0.54);
   border-radius: 100%;
@@ -447,7 +465,7 @@ h1 a, h1 a:visited {
   width: 9em;
 }
 
-/* line 186, modules/_base.scss */
+/* line 203, modules/_base.scss */
 .gKeyPearl {
   height: 6em;
   right: 1.5em;
@@ -455,157 +473,56 @@ h1 a, h1 a:visited {
   width: 6em;
 }
 
-/* line 194, modules/_base.scss */
+/* line 211, modules/_base.scss */
 .gKeyArm {
-  background-color: #deb53c;
+  background-color: #d98302;
   height: 20px;
   position: absolute;
+  right: 7.2em;
   top: -2em;
-  width: 13.5em;
+  width: 100%;
 }
 
-/* line 202, modules/_base.scss */
+/* line 220, modules/_base.scss */
 .gMainArm {
-  background-color: #deb53c;
+  background-color: #d98302;
   height: 20px;
   position: absolute;
+  right: 9.5em;
   top: 2em;
-  width: 10em;
+  width: 100%;
 }
 
 /* line 2, modules/_front.scss */
-.textBox, .interestText, .liveText, .rightText {
-  height: 25px;
-  width: 250px;
+.hello {
+  padding: 15px;
+}
+/* line 5, modules/_front.scss */
+.hello img {
+  -webkit-box-shadow: -3px 3px 0 0 #ff6c22;
+  -moz-box-shadow: -3px 3px 0 0 #ff6c22;
+  box-shadow: -3px 3px 0 0 #ff6c22;
+  border-radius: 15px;
+  width: 100%;
 }
 
-/* line 20, modules/_front.scss */
-.mainWrapper {
-  max-width: 1170px;
-  margin: auto;
-  position: relative;
+/* line 14, modules/_front.scss */
+.textBox, .interestText, .liveText, .rightText {
+  color: #d94a02;
+  font: 1.2em "Righteous";
+  height: 50px;
+  padding-top: 12px;
+  width: 100%;
 }
 
 /* line 26, modules/_front.scss */
-section {
-  padding: 1em;
-  margin-top: -2em;
+.liveText {
+  text-align: right;
 }
 
-/* line 31, modules/_front.scss */
-h2 {
-  font-family: "Raleway";
-  margin-bottom: -.4em;
-  margin-top: 0;
-  text-shadow: 1px 1px 0px #ff6c22;
-}
-
-/* line 38, modules/_front.scss */
-section > img {
-  float: left;
-  margin-right: 1em;
-  width: 11em;
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-}
-
-/* line 47, modules/_front.scss */
-#alexPic {
-  margin-top: 10px;
-  width: 8em;
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-  box-shadow: 3px 3px 0px 0px rgba(255, 108, 34, 0.5);
-}
-
-/* line 57, modules/_front.scss */
-.firstTimers {
-  background-color: rgba(255, 108, 34, 0.53);
-  border-radius: 2em;
-  margin: 0.8em;
-  padding: 1.5em;
-}
-
-/* line 64, modules/_front.scss */
-.firstTimers p {
-  margin-left: 0;
-}
-
-/* line 68, modules/_front.scss */
-.materialGrid {
-  margin-top: 15px;
-  min-width: 100%;
-}
-
-/* line 73, modules/_front.scss */
-.materialPic {
-  width: 2.5em;
-}
-
-/* line 77, modules/_front.scss */
-.descripCell {
-  width: 80%;
-}
-
-/* line 81, modules/_front.scss */
-.altoTenor {
+/* line 37, modules/_front.scss */
+.contactFront {
   background-color: #ff6c22;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-}
-
-/* line 86, modules/_front.scss */
-.clickHere {
-  background-color: #c74000;
-  border-radius: 100px;
-  border: 1px solid rgba(170, 170, 170, 0.44);
-  color: #fff;
-  cursor: pointer;
-  font: 1em Verdana;
-  padding: 4px 12px;
-  outline: none;
-  width: 95%;
-}
-
-/* line 98, modules/_front.scss */
-.clickHere:hover {
-  border-color: #8dff96;
-  color: #8dff96;
-  -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  -moz-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-}
-
-/* line 106, modules/_front.scss */
-.cellColor {
-  background-color: rgba(255, 108, 34, 0.27);
-}
-
-/* line 110, modules/_front.scss */
-.appCell {
-  background-color: #ff6c22;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
-}
-
-/* line 115, modules/_front.scss */
-th {
-  background-color: rgba(255, 108, 34, 0.62);
-  font-family: "Raleway";
-  padding: 1%;
-}
-
-/* line 121, modules/_front.scss */
-td {
-  font-size: .7em;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-/* line 129, modules/_front.scss */
-.vidHolder {
-  height: 210px;
-  margin-top: 1em;
-  width: 100%;
 }
 
 /* line 2, modules/_admin.scss */
@@ -740,38 +657,43 @@ fieldset button {
 }
 
 /* line 2, modules/_helpers.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 6, modules/_helpers.scss */
 .center {
   text-align: center;
 }
 
-/* line 6, modules/_helpers.scss */
+/* line 10, modules/_helpers.scss */
 .floatL {
   float: left;
 }
 
-/* line 10, modules/_helpers.scss */
+/* line 14, modules/_helpers.scss */
 .floatR {
   float: right;
 }
 
-/* line 15, modules/_helpers.scss */
+/* line 19, modules/_helpers.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 20, modules/_helpers.scss */
+/* line 24, modules/_helpers.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 24, modules/_helpers.scss */
+/* line 28, modules/_helpers.scss */
 .clearfix {
   *zoom: 1;
 }
 
-/* line 28, modules/_helpers.scss */
+/* line 32, modules/_helpers.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -781,90 +703,6 @@ fieldset button {
 /** {
   outline: 1px solid red;
 }*/
-@media (min-width: 600px) {
-  /* line 4, modules/_media.scss */
-  html {
-    font-size: 120%;
-  }
-
-  /* line 7, modules/_media.scss */
-  #login {
-    border: 3px solid #ff6c22;
-    height: 100px;
-    width: 100px;
-    top: -130px;
-  }
-
-  /* line 13, modules/_media.scss */
-  img {
-    width: 13em;
-  }
-
-  /* line 16, modules/_media.scss */
-  #alexPic {
-    width: 9em;
-  }
-
-  /* line 19, modules/_media.scss */
-  #materialsWrapper, #vidWrapper {
-    box-sizing: border-box;
-    float: left;
-    width: 48%;
-  }
-
-  /* line 24, modules/_media.scss */
-  #vidWrapper {
-    margin-left: 4%;
-  }
-
-  /* line 27, modules/_media.scss */
-  #vidWrapper h2 {
-    font-size: 100%;
-  }
-}
-@media (min-width: 900px) {
-  /* line 33, modules/_media.scss */
-  html {
-    font-size: 140%;
-  }
-
-  /* line 36, modules/_media.scss */
-  #main {
-    float: left;
-    width: 59%;
-  }
-
-  /* line 40, modules/_media.scss */
-  .firstTimers {
-    float: right;
-    font-size: 76%;
-    margin-top: -1em;
-    width: 35%;
-  }
-
-  /* line 46, modules/_media.scss */
-  #materialsWrapper {
-    float: none;
-    width: 100%;
-  }
-
-  /* line 50, modules/_media.scss */
-  .materialPic {
-    width: 3em;
-  }
-
-  /* line 53, modules/_media.scss */
-  #vidWrapper {
-    float: none;
-    margin-left: 0;
-    width: 100%;
-  }
-
-  /* line 58, modules/_media.scss */
-  #login {
-    top: -144px;
-  }
-}
 /* line 2, modules/_student.scss */
 .studentPortal {
   margin: auto;

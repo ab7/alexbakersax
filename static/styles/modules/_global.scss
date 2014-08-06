@@ -1,9 +1,14 @@
 // fonts
 $titleFont: 'Lobster';
+$secondaryFont: 'Noto Sans';
 $buttonFont: 'Righteous';
 
 // colors
-$mainColor: rgba(255, 108, 34, 1);
+$mainColor: #ff6c22;
+$secondaryColor: #D94A02;
+$adjacentColor: #C70230;
+$adjacentColorDark: #9C0024;
+$textShadowColor: #C70230;
 
 // base styles
 a, a:visited {

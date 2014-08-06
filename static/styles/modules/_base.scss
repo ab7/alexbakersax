@@ -1,9 +1,9 @@
 // colors
-$saxMainColor: #e6ba40;
+$saxMainColor: #FFA622;
 $saxKeyColor: rgba(253, 218, 143, 0.54);
 $saxPearlColor: rgb(255, 248, 240);
 $saxPearlBorder: rgb(183, 141, 32);
-$saxArmColor: #deb53c;
+$saxArmColor: #D98302;
 
 
 // sizes
@@ -15,17 +15,27 @@ $armWidth: 20px;
 // positions
 $keyPosR: 9.5em;
 $keyPosT: 2em;
-$armLen: 2.5em;
+$armLen: 100%;
 
 
 // main styles
 body, html {
-  height: 740px;
+  background-color: $adjacentColor;
+  height: 100%;
 }
 
-header {
-  margin-bottom: 3em;
-  padding: 11px;
+.title {
+  background-color: $saxMainColor;
+  padding: 15px;
+  max-width: 350px;
+  width: 75%;
+}
+
+.title2 {
+  margin-top: -1.5em;
+  max-width: 430px;
+  padding-right: 15px;
+  text-align: right;
 }
 
 h1 {
@@ -33,7 +43,7 @@ h1 {
   font-family: $titleFont;
   font-size: 3.8em;
   margin: 0;
-  text-shadow: 3px 2px 0px rgba(255, 108, 34, 1);
+  text-shadow: 3px 2px 0px $textShadowColor;
 }
 
 h1 a, h1 a:visited {
@@ -43,15 +53,19 @@ h1 a, h1 a:visited {
 
 .saxBody {
   background-color: $saxMainColor;
-  color: $mainColor;
+  color: $adjacentColor;
   height: 100%;
-  max-width: 300px;
+  margin-top: -3.3em;
+  max-width: 350px;
+  padding-top: 1em;
+  width: 75%;
 }
 
 .saxRod {
   background-color: $saxArmColor;
   float: left;
-  height: 430px;
+  height: 100%;
+  padding-top: 3em;
   width: $armWidth;
 }
 
@@ -90,7 +104,7 @@ h1 a, h1 a:visited {
   border-radius: 100%;
   height: 9em;
   position: absolute;
-  right: $keyPosR - 2;
+  right: $keyPosR - 3;
   width: 9em;
 }
 
@@ -106,8 +120,9 @@ h1 a, h1 a:visited {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
+  right: $keyPosR + 3;
   top: $keyPosT + 2.3;
-  width: $armLen + 3.3;
+  width: $armLen;
 }
 
 
@@ -140,8 +155,9 @@ h1 a, h1 a:visited {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
+  right: $keyPosR + 2;
   top: $keyPosT;
-  width: $armLen + 5.5;
+  width: $armLen;
 }
 
 
@@ -163,8 +179,9 @@ h1 a, h1 a:visited {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
+  right: $keyPosR + 1.7;
   top: $keyPosT - 9;
-  width: $armLen + 5;
+  width: $armLen;
 }
 
 
@@ -195,14 +212,16 @@ h1 a, h1 a:visited {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
+  right: $keyPosR - 2.3;
   top: $keyPosT - 4;
-  width: $armLen + 11;
+  width: $armLen;
 }
 
 .gMainArm {
   background-color: $saxArmColor;
   height: $armWidth;
   position: absolute;
+  right: $keyPosR;
   top: $keyPosT;
-  width: $armLen + 7.5;
+  width: $armLen;
 }
