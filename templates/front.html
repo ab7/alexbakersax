@@ -1,22 +1,81 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="hello">
-    <div class="interestText">
-      Interested in playing the sax?
-    </div>
-    <div class="liveText">
-      Live in or around Denver?
-    </div>
-    <div class="rightText">
-      You found the right place!
-    </div>
-    <p>
-      My name is Alex and I've been a professional saxophone player and teacher based in Denver, Colorado for the last ten years. Beginner to advanced, I'm always accepting new students!
-    </p>
-    <img src="static/img/alex_teaching.jpg" alt="Alex teaching a lesson">
-    <div class="contactFront">
-      <a href="/contact">Contact</a> me today to setup a lesson!
+  <div id="fullpage">
+    <div class="section">
+      <div class="slide">
+        <div class="title">
+          <h1>
+            <a href="/">
+              Saxophone
+            </a>
+          </h1>
+        </div>
+        <div class="title2">
+          <h1>
+            <a href="/">
+              Lessons
+            </a>
+          </h1>
+        </div>
+        <div class="saxBody">
+          <div class="saxRod"></div>
+          <div class="bKey">
+            <div class="bKeyMain"></div>
+            <button class="bKeyPearl">
+                New Student Info
+            </button>
+            <div class="bKeyArm"></div>
+          </div>
+          <div class="altKey">
+            <button class="altKeyPearl">
+                Student Login
+            </button>
+          </div>
+          <div class="bisKey">
+            <div class="bisKeyMain"></div>
+            <div class="bisKeyPearl"></div>
+            <div class="bisKeyArm"></div>
+          </div>
+          <div class="aKey">
+            <div class="aKeyArm"></div>
+            <button class="aKeyPearl">
+                Materials
+            </button>
+          </div>
+          <div class="gKey">
+            <div class="gKeyMain"></div>
+            <div class="gKeyArm"></div>
+            <div class="gMainArm"></div>
+            <button class="gKeyPearl">
+                Contact
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="hello">
+          <div class="interestText">
+            Interested in playing the sax?
+          </div>
+          <div class="liveText">
+            Live in or around Denver?
+          </div>
+          <div class="rightText">
+            You found the right place!
+          </div>
+          <img class="floatL" src="static/img/alex_teaching.jpg" alt="Alex teaching a lesson">
+          <div class="helloContent">
+            My name is Alex and I've been a professional saxophone player and teacher based in Denver, Colorado for the last ten years. Beginner to advanced, I'm always accepting new students!
+          </div>
+          <div class="contactLink">
+            <a href="#contact">
+              Contact
+            </a>
+            <div class="circleWrap">me today to setup a lesson!</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 {% endblock %}

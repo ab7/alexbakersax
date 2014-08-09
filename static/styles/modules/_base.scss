@@ -21,7 +21,7 @@ $armLen: 100%;
 // main styles
 body, html {
   background-color: $adjacentColor;
-  height: 100%;
+  min-height: 650px;
 }
 
 .title {

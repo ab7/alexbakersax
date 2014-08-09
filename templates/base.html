@@ -7,58 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saxophone Lessons</title>
     <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/jquery.fullPage.css" />
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Lobster%7CRaleway:600%7CNoto+Sans%7CRighteous'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/vender/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/vender/jquery.lettering-0.6.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <div class="title">
-      <h1>
-        <a href="/">
-          Saxophone
-        </a>
-      </h1>
-    </div>
-    <div class="title2">
-      <h1>
-        <a href="/">
-          Lessons
-        </a>
-      </h1>
-    </div>
-    <div class="saxBody">
-      <div class="saxRod"></div>
-      <div class="bKey">
-        <div class="bKeyMain"></div>
-        <button class="bKeyPearl">
-            New Student Info
-        </button>
-        <div class="bKeyArm"></div>
-      </div>
-      <div class="altKey">
-        <button class="altKeyPearl">
-            Student Login
-        </button>
-      </div>
-      <div class="bisKey">
-        <div class="bisKeyMain"></div>
-        <div class="bisKeyPearl"></div>
-        <div class="bisKeyArm"></div>
-      </div>
-      <div class="aKey">
-        <div class="aKeyArm"></div>
-        <button class="aKeyPearl">
-            Materials
-        </button>
-      </div>
-      <div class="gKey">
-        <div class="gKeyMain"></div>
-        <div class="gKeyArm"></div>
-        <div class="gMainArm"></div>
-        <button class="gKeyPearl">
-            Contact
-        </button>
-      </div>
-    </div>
-    <div id="content">
+    <div>
       {% block content %}
       {% endblock %}
     </div>

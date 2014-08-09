@@ -1,11 +1,14 @@
 // main styles
 .hello {
+  margin: auto;
   padding: 15px;
+  width: 75%;
 
   img {
     @include box-shadow(-3px, 3px, 0, 0, $mainColor);
     border-radius: 15px;
-    width: 100%;
+    margin: 2em 1em .1em 0;
+    width: 50%;
   }
 }
 
@@ -15,7 +18,7 @@
   color: $secondaryColor;
   font: 1.2em $buttonFont;
   height: 50px;
-  padding-top: 12px;
+  padding-top: 1em;
   width: 100%;
 }
 
@@ -33,7 +36,47 @@
 }
 
 
+// content
+.helloContent {
+  margin: 2em 0;
+}
+
+
 // contact
-.contactFront {
+.contactLink {
   background-color: $mainColor;
+  border: 2em solid $adjacentColorDark;
+  border-radius: 100%;
+  height: 10em;
+  margin: auto;
+  position: relative;
+  width: 10em;
+
+  a {
+    color: #fff;
+    font: 4em $titleFont;
+    left: -.7em;
+    position: absolute;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #e05e5e;
+  }
+}
+
+.circleWrap span {
+  font: 26px Monaco, MonoSpace;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}
+
+@for $i from 1 through 100 {
+  .char#{$i} {
+    transform(rotate($i * 6 + deg));
+  }
 }
