@@ -15,7 +15,7 @@
 
 // questions
 .textBox {
-  color: $secondaryColor;
+  color: #fff;
   font: 1.2em $buttonFont;
   height: 50px;
   padding-top: 1em;
@@ -58,6 +58,7 @@
     left: -.7em;
     position: absolute;
     text-decoration: none;
+    top: .2em;
   }
 
   a:hover {
@@ -65,18 +66,21 @@
   }
 }
 
+
+// circle wrap using lettering.js
 .circleWrap span {
-  font: 26px Monaco, MonoSpace;
-  height: 200px;
+  @include transform-origin(bottom center);
+  font: 1.1em Monaco, MonoSpace;
+  height: 4.7em;
   position: absolute;
-  width: 20px;
-  left: 0;
-  top: 0;
-  transform-origin: bottom center;
+  width: .5em;
+  left: 2.4em;
+  top: -1.8em;
+
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 21 {
   .char#{$i} {
-    transform(rotate($i * 6 + deg));
+    @include transform(rotate(($i - 10.5) * 6 + deg));
   }
 }

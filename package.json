@@ -1,0 +1,27 @@
+{
+  "name": "sax-lessons",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.4",
+    "grunt-contrib-uglify": "~0.5.0"
+  },
+  "description": "Saxophone lessons website, with backend for students",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ab7/sax-lessons.git"
+  },
+  "keywords": [
+    "sax",
+    "saxophone",
+    "lessons"
+  ],
+  "author": "Alex Baker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ab7/sax-lessons/issues"
+  },
+  "homepage": "https://github.com/ab7/sax-lessons"
+}
