@@ -1,0 +1,955 @@
+/* line 3, modules/_normalize.scss */
+html {
+  font-family: "Noto Sans", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 9, modules/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 24, modules/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 31, modules/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 36, modules/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 42, modules/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 46, modules/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/* line 51, modules/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 55, modules/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 60, modules/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 64, modules/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 68, modules/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 73, modules/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 78, modules/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 83, modules/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 90, modules/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 94, modules/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 98, modules/_normalize.scss */
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* line 103, modules/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 107, modules/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 111, modules/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 122, modules/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 129, modules/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 138, modules/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 144, modules/_normalize.scss */
+button {
+  overflow: visible;
+  outline: none;
+}
+
+/* line 150, modules/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 157, modules/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 163, modules/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 168, modules/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 173, modules/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/* line 178, modules/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 184, modules/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 188, modules/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 197, modules/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 201, modules/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 207, modules/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 212, modules/_normalize.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* line 217, modules/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 221, modules/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 227, modules/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 14, modules/_global.scss */
+a, a:visited {
+  color: #ff6c22;
+}
+
+/* line 18, modules/_global.scss */
+fieldset {
+  max-width: 380px;
+}
+
+/* line 22, modules/_base.scss */
+body, html {
+  background-color: #c70230;
+  min-height: 650px;
+}
+
+/* line 27, modules/_base.scss */
+.title {
+  background-color: #ffa622;
+  padding: 15px;
+  max-width: 350px;
+  width: 75%;
+}
+
+/* line 34, modules/_base.scss */
+.title2 {
+  margin-top: -1.5em;
+  max-width: 430px;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* line 41, modules/_base.scss */
+h1 {
+  color: #fff;
+  font-family: "Lobster";
+  font-size: 3.8em;
+  margin: 0;
+  text-shadow: 3px 2px 0px #c70230;
+}
+
+/* line 49, modules/_base.scss */
+h1 a, h1 a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 54, modules/_base.scss */
+.saxBody {
+  background-color: #ffa622;
+  color: #c70230;
+  height: 100%;
+  margin-top: -3.3em;
+  max-width: 350px;
+  padding-top: 1em;
+  width: 75%;
+}
+
+/* line 64, modules/_base.scss */
+.saxRod {
+  background-color: #d98302;
+  float: left;
+  height: 100%;
+  padding-top: 3em;
+  width: 20px;
+}
+
+/* line 72, modules/_base.scss */
+.pearl, .altKeyPearl, .bKeyPearl, .bisKeyPearl, .aKeyPearl, .gKeyPearl {
+  background-color: #fff8f0;
+  border: 3px solid #b78d20;
+  border-radius: 100%;
+  font-family: "Righteous";
+  position: absolute;
+}
+
+/* line 82, modules/_base.scss */
+.altKey {
+  position: relative;
+}
+
+/* line 86, modules/_base.scss */
+.altKeyPearl {
+  height: 6em;
+  right: 10.5em;
+  top: -13em;
+  width: 6em;
+}
+
+/* line 96, modules/_base.scss */
+.bKey {
+  height: 11em;
+  margin-top: 1.3em;
+  position: relative;
+}
+
+/* line 102, modules/_base.scss */
+.bKeyMain {
+  background-color: rgba(253, 218, 143, 0.54);
+  border-radius: 100%;
+  height: 9em;
+  position: absolute;
+  right: 6.5em;
+  width: 9em;
+}
+
+/* line 111, modules/_base.scss */
+.bKeyPearl {
+  height: 6em;
+  right: 6.5em;
+  top: 4em;
+  width: 6em;
+}
+
+/* line 119, modules/_base.scss */
+.bKeyArm {
+  background-color: #d98302;
+  height: 20px;
+  position: absolute;
+  right: 12.5em;
+  top: 4.3em;
+  width: 100%;
+}
+
+/* line 130, modules/_base.scss */
+.bisKey {
+  height: 10em;
+  margin-top: 2em;
+  position: relative;
+}
+
+/* line 136, modules/_base.scss */
+.bisKeyMain {
+  background-color: rgba(253, 218, 143, 0.54);
+  border-radius: 100%;
+  height: 8em;
+  position: absolute;
+  right: 6.8em;
+  top: -1.7em;
+  width: 8em;
+}
+
+/* line 146, modules/_base.scss */
+.bisKeyPearl {
+  height: 4em;
+  right: 5.8em;
+  top: -3em;
+  width: 4em;
+}
+
+/* line 154, modules/_base.scss */
+.bisKeyArm {
+  background-color: #d98302;
+  height: 20px;
+  position: absolute;
+  right: 11.5em;
+  top: 2em;
+  width: 100%;
+}
+
+/* line 165, modules/_base.scss */
+.aKey {
+  margin-top: 1.3em;
+  position: relative;
+}
+
+/* line 170, modules/_base.scss */
+.aKeyPearl {
+  height: 6em;
+  right: 5.5em;
+  top: -9.5em;
+  width: 6em;
+}
+
+/* line 178, modules/_base.scss */
+.aKeyArm {
+  background-color: #d98302;
+  height: 20px;
+  position: absolute;
+  right: 11.2em;
+  top: -7em;
+  width: 100%;
+}
+
+/* line 189, modules/_base.scss */
+.gKey {
+  position: relative;
+}
+
+/* line 193, modules/_base.scss */
+.gKeyMain {
+  background-color: rgba(253, 218, 143, 0.54);
+  border-radius: 100%;
+  height: 9em;
+  position: absolute;
+  right: 6em;
+  top: -2em;
+  width: 9em;
+}
+
+/* line 203, modules/_base.scss */
+.gKeyPearl {
+  height: 6em;
+  right: 1.5em;
+  top: -4em;
+  width: 6em;
+}
+
+/* line 211, modules/_base.scss */
+.gKeyArm {
+  background-color: #d98302;
+  height: 20px;
+  position: absolute;
+  right: 7.2em;
+  top: -2em;
+  width: 100%;
+}
+
+/* line 220, modules/_base.scss */
+.gMainArm {
+  background-color: #d98302;
+  height: 20px;
+  position: absolute;
+  right: 9.5em;
+  top: 2em;
+  width: 100%;
+}
+
+/* line 2, modules/_front.scss */
+.hello {
+  margin: auto;
+  padding: 15px;
+  width: 75%;
+}
+/* line 7, modules/_front.scss */
+.hello img {
+  box-shadow: -3px 3px 0 0 #ff6c22;
+  border-radius: 15px;
+  margin: 2em 1em .1em 0;
+  width: 50%;
+}
+
+/* line 17, modules/_front.scss */
+.textBox, .interestText, .liveText, .rightText {
+  color: #fff;
+  font: 1.2em "Righteous";
+  height: 50px;
+  padding-top: 1em;
+  width: 100%;
+}
+
+/* line 29, modules/_front.scss */
+.liveText {
+  text-align: right;
+}
+
+/* line 40, modules/_front.scss */
+.helloContent {
+  margin: 2em 0;
+}
+
+/* line 46, modules/_front.scss */
+.contactLink {
+  background-color: #ff6c22;
+  border: 2em solid #9c0024;
+  border-radius: 100%;
+  height: 10em;
+  margin: auto;
+  position: relative;
+  width: 10em;
+}
+/* line 55, modules/_front.scss */
+.contactLink a {
+  color: #fff;
+  font: 4em "Lobster";
+  left: -.7em;
+  position: absolute;
+  text-decoration: none;
+  top: .2em;
+}
+/* line 64, modules/_front.scss */
+.contactLink a:hover {
+  color: #e05e5e;
+}
+
+/* line 71, modules/_front.scss */
+.circleWrap span {
+  moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  font: 1.1em Monaco, MonoSpace;
+  height: 4.7em;
+  position: absolute;
+  width: .5em;
+  left: 2.4em;
+  top: -1.8em;
+}
+
+/* line 83, modules/_front.scss */
+.char1 {
+  -ms-transform: rotate(-57deg);
+  -webkit-transform: rotate(-57deg);
+  transform: rotate(-57deg);
+}
+
+/* line 83, modules/_front.scss */
+.char2 {
+  -ms-transform: rotate(-51deg);
+  -webkit-transform: rotate(-51deg);
+  transform: rotate(-51deg);
+}
+
+/* line 83, modules/_front.scss */
+.char3 {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 83, modules/_front.scss */
+.char4 {
+  -ms-transform: rotate(-39deg);
+  -webkit-transform: rotate(-39deg);
+  transform: rotate(-39deg);
+}
+
+/* line 83, modules/_front.scss */
+.char5 {
+  -ms-transform: rotate(-33deg);
+  -webkit-transform: rotate(-33deg);
+  transform: rotate(-33deg);
+}
+
+/* line 83, modules/_front.scss */
+.char6 {
+  -ms-transform: rotate(-27deg);
+  -webkit-transform: rotate(-27deg);
+  transform: rotate(-27deg);
+}
+
+/* line 83, modules/_front.scss */
+.char7 {
+  -ms-transform: rotate(-21deg);
+  -webkit-transform: rotate(-21deg);
+  transform: rotate(-21deg);
+}
+
+/* line 83, modules/_front.scss */
+.char8 {
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+/* line 83, modules/_front.scss */
+.char9 {
+  -ms-transform: rotate(-9deg);
+  -webkit-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+}
+
+/* line 83, modules/_front.scss */
+.char10 {
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/* line 83, modules/_front.scss */
+.char11 {
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+
+/* line 83, modules/_front.scss */
+.char12 {
+  -ms-transform: rotate(9deg);
+  -webkit-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+
+/* line 83, modules/_front.scss */
+.char13 {
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+/* line 83, modules/_front.scss */
+.char14 {
+  -ms-transform: rotate(21deg);
+  -webkit-transform: rotate(21deg);
+  transform: rotate(21deg);
+}
+
+/* line 83, modules/_front.scss */
+.char15 {
+  -ms-transform: rotate(27deg);
+  -webkit-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+
+/* line 83, modules/_front.scss */
+.char16 {
+  -ms-transform: rotate(33deg);
+  -webkit-transform: rotate(33deg);
+  transform: rotate(33deg);
+}
+
+/* line 83, modules/_front.scss */
+.char17 {
+  -ms-transform: rotate(39deg);
+  -webkit-transform: rotate(39deg);
+  transform: rotate(39deg);
+}
+
+/* line 83, modules/_front.scss */
+.char18 {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 83, modules/_front.scss */
+.char19 {
+  -ms-transform: rotate(51deg);
+  -webkit-transform: rotate(51deg);
+  transform: rotate(51deg);
+}
+
+/* line 83, modules/_front.scss */
+.char20 {
+  -ms-transform: rotate(57deg);
+  -webkit-transform: rotate(57deg);
+  transform: rotate(57deg);
+}
+
+/* line 83, modules/_front.scss */
+.char21 {
+  -ms-transform: rotate(63deg);
+  -webkit-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+
+/* line 2, modules/_admin.scss */
+.adminWrapper {
+  margin: auto;
+  width: 90%;
+}
+
+/* line 7, modules/_admin.scss */
+.adminWrapper h2, .adminWrapper nav {
+  padding: .3em;
+  text-align: center;
+}
+
+/* line 12, modules/_admin.scss */
+.studentInfo {
+  border: 1px solid black;
+  border-radius: 1em;
+  font-size: .8em;
+  display: block;
+  margin: .2em auto;
+  max-width: 700px;
+}
+
+/* line 21, modules/_admin.scss */
+.studentCell {
+  display: inline-block;
+  padding: .2em .3em;
+  text-align: center;
+  width: 32%;
+}
+
+/* line 30, modules/_admin.scss */
+.lastLesson {
+  background-color: rgba(255, 108, 34, 0.21);
+  border-radius: 10px;
+  font-size: 0.7em;
+  margin: 15px 0;
+  padding: 15px;
+  white-space: pre-wrap;
+}
+
+/* line 39, modules/_admin.scss */
+.lastLesson div {
+  color: rgba(255, 108, 34, 0.57);
+  font: bold 1.2em Verdana;
+  margin: -40px 0;
+}
+
+/* line 45, modules/_admin.scss */
+.lastLesson p {
+  margin: 5px 0 -40px;
+}
+
+/* line 49, modules/_admin.scss */
+#notesEntry {
+  width: 90%;
+}
+
+/* line 53, modules/_admin.scss */
+textarea {
+  height: 8em;
+  width: 100%;
+}
+
+/* line 58, modules/_admin.scss */
+.hide {
+  display: none;
+}
+
+/* line 62, modules/_admin.scss */
+.show {
+  display: block;
+}
+
+/* line 68, modules/_admin.scss */
+footer {
+  text-align: center;
+}
+
+/* line 72, modules/_admin.scss */
+footer a {
+  color: #ff6c22;
+}
+
+/* line 76, modules/_admin.scss */
+footer a:visited {
+  color: #ff6c22;
+}
+
+/* line 2, modules/_forms.scss */
+.formTitle {
+  text-align: center;
+}
+
+/* line 6, modules/_forms.scss */
+fieldset {
+  border-radius: 1em;
+  margin: 1em auto;
+  padding: 1em;
+  width: 35%;
+}
+
+/* line 13, modules/_forms.scss */
+fieldset input {
+  display: block;
+}
+
+/* line 17, modules/_forms.scss */
+fieldset button {
+  border-radius: 5px;
+  margin-top: 1em;
+  outline: none;
+  text-align: center;
+}
+
+/* line 24, modules/_forms.scss */
+#return {
+  display: block;
+  text-align: center;
+  color: #ff6c22;
+}
+
+/* line 30, modules/_forms.scss */
+#return:visited {
+  color: #ff6c22;
+}
+
+/* line 34, modules/_forms.scss */
+.error {
+  color: red;
+}
+
+/* line 2, modules/_helpers.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 6, modules/_helpers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 10, modules/_helpers.scss */
+.floatL {
+  float: left;
+}
+
+/* line 14, modules/_helpers.scss */
+.floatR {
+  float: right;
+}
+
+/* line 19, modules/_helpers.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 24, modules/_helpers.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 28, modules/_helpers.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 32, modules/_helpers.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/** {
+  outline: 1px solid red;
+}*/
+/* line 2, modules/_student.scss */
+.studentPortal {
+  margin: auto;
+  width: 80%;
+}
+
+/* line 7, modules/_student.scss */
+.studentPortal h2, .studentPortal nav {
+  padding: .3em;
+  text-align: center;
+}
+
+/* line 12, modules/_student.scss */
+.lessonNotes {
+  background-color: rgba(255, 108, 34, 0.15);
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 700px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 22, modules/_student.scss */
+.lessonNotes h3 {
+  color: #ff6c22;
+  font-family: 'Lobster';
+  margin: -1em 0 -2.5em;
+}
+
+/* line 28, modules/_student.scss */
+.googleDrive {
+  background-color: rgba(88, 88, 137, 0.75);
+  border-radius: 1em;
+  padding: 2em;
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+}
+
+/* line 37, modules/_student.scss */
+.driveButton {
+  display: inline-block;
+  background-color: #a9bec6;
+  border-radius: .5em;
+  border: 1px solid rgba(136, 109, 109, 0.44);
+  color: #fff;
+  cursor: pointer;
+  font: 1em Verdana;
+  margin: 1em 1em;
+  padding: 4px 12px;
+  outline: none;
+  text-decoration: none;
+  width: 150px;
+}
+
+/* line 52, modules/_student.scss */
+.driveButton:hover {
+  background-color: rgba(169, 190, 198, 0.42);
+}
+
+/* line 56, modules/_student.scss */
+.driveButton:visited {
+  color: #fff;
+}

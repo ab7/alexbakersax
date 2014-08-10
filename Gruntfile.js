@@ -5,11 +5,12 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     autoprefixer: {
-      options: {
-        // Task-specific options go here.
-      },
-      your_target: {
-        // Target-specific file lists and/or options go here.
+      single_file: {
+        options: {
+          // Target-specific options go here.
+        },
+        src: 'static/styles/main.css',
+        dest: 'static/styles/main.prefixed.css'
       }
     }
   });
@@ -17,5 +18,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['autoprefixer', 'cssmin', 'sass', 'uglify']);
+  grunt.registerTask('default', ['autoprefixer']);
 };

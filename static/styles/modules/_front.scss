@@ -5,7 +5,7 @@
   width: 75%;
 
   img {
-    @include box-shadow(-3px, 3px, 0, 0, $mainColor);
+    box-shadow: -3px, 3px, 0, 0, $mainColor;
     border-radius: 15px;
     margin: 2em 1em .1em 0;
     width: 50%;
@@ -69,18 +69,17 @@
 
 // circle wrap using lettering.js
 .circleWrap span {
-  @include transform-origin(bottom center);
   font: 1.1em Monaco, MonoSpace;
   height: 4.7em;
   position: absolute;
   width: .5em;
   left: 2.4em;
   top: -1.8em;
-
+  transform-origin: bottom center;
 }
 
 @for $i from 1 through 21 {
   .char#{$i} {
-    @include transform(rotate(($i - 10.5) * 6 + deg));
+    transform: rotate(($i - 10.5) * 6 + deg);
   }
 }
