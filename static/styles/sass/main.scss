@@ -1,0 +1,16 @@
+// base
+@import 'base/normalize';
+@import 'base/globals';
+@import 'base/helpers';
+
+
+// vendor
+@import 'vendor/jquery.fullPage';
+
+
+// partials
+@import 'partials/sax';
+@import 'partials/front';
+@import 'partials/admin';
+@import 'partials/forms';
+@import 'partials/student';
