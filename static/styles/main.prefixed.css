@@ -238,6 +238,44 @@ fieldset {
   max-width: 380px;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/** {
+  outline: 1px solid red;
+}*/
 /**
  * fullPage 2.1.9
  * https://github.com/alvarotrigo/fullPage.js
@@ -437,44 +475,33 @@ html, body {
   left: 20px;
 }
 
-.align-right {
-  text-align: right;
+.saxBody {
+  background-color: #ffa622;
+  color: #c70230;
+  height: 100%;
+  margin-top: -3.3em;
+  max-width: 350px;
+  padding-top: 1em;
+  position: relative;
+  width: 75%;
 }
 
-.center {
-  text-align: center;
-}
-
-.floatL {
+.saxRod {
+  background-color: #d98302;
   float: left;
+  height: 100%;
+  padding-top: 3em;
+  width: 20px;
 }
 
-.floatR {
-  float: right;
+.pearl, .altKeyPearl, .bKeyPearl, .bisKeyPearl, .aKeyPearl, .gKeyPearl {
+  background-color: #fff8f0;
+  border: 3px solid #b78d20;
+  border-radius: 100%;
+  font-family: "Righteous";
+  position: absolute;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/** {
-  outline: 1px solid red;
-}*/
 .title {
   background-color: #ffa622;
   padding: 15px;
@@ -500,32 +527,6 @@ h1 {
 h1 a, h1 a:visited {
   color: #fff;
   text-decoration: none;
-}
-
-.saxBody {
-  background-color: #ffa622;
-  color: #c70230;
-  height: 100%;
-  margin-top: -3.3em;
-  max-width: 350px;
-  padding-top: 1em;
-  width: 75%;
-}
-
-.saxRod {
-  background-color: #d98302;
-  float: left;
-  height: 100%;
-  padding-top: 3em;
-  width: 20px;
-}
-
-.pearl, .altKeyPearl, .bKeyPearl, .bisKeyPearl, .aKeyPearl, .gKeyPearl {
-  background-color: #fff8f0;
-  border: 3px solid #b78d20;
-  border-radius: 100%;
-  font-family: "Righteous";
-  position: absolute;
 }
 
 .altKey {
@@ -660,6 +661,59 @@ h1 a, h1 a:visited {
   right: 9.5em;
   top: 2em;
   width: 100%;
+}
+
+.bell {
+  background-color: #ffa622;
+  height: 9em;
+  position: absolute;
+  right: -29em;
+  top: 31em;
+  width: 25em;
+}
+
+.bellRim {
+  background-image: -webkit-linear-gradient(top, #4f330b 0%, #ffa622 100%);
+  height: 4em;
+  margin: -1.7em 0 0 -2em;
+  position: relative;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  width: 30em;
+}
+
+.bellRimEdge {
+  background-color: #ffa622;
+  border: 1px solid #b78d20;
+  height: .5em;
+  margin: -4em 0 0 -2em;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  width: 31em;
+}
+
+.bellCurve, .bellCurveL, .bellCurveR {
+  background-color: #c70230;
+  border-radius: 100%;
+  height: 5em;
+  position: absolute;
+  width: 4em;
+}
+
+.bellCurveL {
+  left: -1.9em;
+  -webkit-transform: skewY(40deg);
+  -ms-transform: skewY(40deg);
+  transform: skewY(40deg);
+}
+
+.bellCurveR {
+  right: -2em;
+  -webkit-transform: skewY(-40deg);
+  -ms-transform: skewY(-40deg);
+  transform: skewY(-40deg);
 }
 
 .hello {

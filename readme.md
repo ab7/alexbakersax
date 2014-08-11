@@ -10,3 +10,4 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 * Same page login with js
 * Fix image sizes
 * Modular note options
+* Grunt Watch LiveReload
