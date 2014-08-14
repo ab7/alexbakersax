@@ -7,27 +7,28 @@ $saxArmColor: #D98302;
 
 
 // sizes
+$mainKey: 9em;
 $bigKey: 6em;
 $smallKey: 4em;
 $armWidth: 20px;
 
 
 // positions
-$keyPosR: 9.5em;
+$keyPosR: 6em;
 $keyPosT: 2em;
 $armLen: 100%;
 
 
-// main styles
-.saxBody {
+// sax top main styles
+.saxBodyTop {
   background-color: $saxMainColor;
   color: $adjacentColor;
+  float: left;
   height: 100%;
-  max-height: 1140px;
   max-width: 300px;
   padding-top: 1em;
   position: relative;
-  width: 75%;
+  width: 60%;
 }
 
 .saxRod {
@@ -48,30 +49,17 @@ $armLen: 100%;
 
 .title {
   background-color: $saxMainColor;
-  padding: 15px;
-  max-width: 300px;
-  width: 75%;
-}
-
-.title2 {
-  margin-top: -1.5em;
-  max-width: 430px;
-  padding-right: 15px;
-  position: absolute;
-  right: -4em;
-  text-align: right;
-  top: -.5em;
-}
-
-h1 {
   color: #fff;
-  font-family: $titleFont;
-  font-size: 3.8em;
+  display: inline-block;
+  font: 2em $titleFont;
+  padding: 15px;
   margin: 0;
+  max-width: 300px;
   text-shadow: 3px 2px 0px $textShadowColor;
+  width: 50%;
 }
 
-h1 a, h1 a:visited {
+.title h1 a, .title h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -101,10 +89,10 @@ h1 a, h1 a:visited {
 .bKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 9em;
+  height: $mainKey;
   position: absolute;
   right: $keyPosR - 3;
-  width: 9em;
+  width: $mainKey;
 }
 
 .bKeyPearl {
@@ -135,11 +123,11 @@ h1 a, h1 a:visited {
 .bisKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 8em;
+  height: $mainKey - 1;
   position: absolute;
   right: $keyPosR - 2.7;
   top: $keyPosT - 3.7;
-  width: 8em;
+  width: $mainKey - 1;
 }
 
 .bisKeyPearl {
@@ -192,11 +180,11 @@ h1 a, h1 a:visited {
 .gKeyMain {
   background-color: $saxKeyColor;
   border-radius: 100%;
-  height: 9em;
+  height: $mainKey;
   position: absolute;
-  right: $keyPosT + 4;
+  right: $keyPosT - 1;
   top: $keyPosT - 4;
-  width: 9em;
+  width: $mainKey;
 }
 
 .gKeyPearl {
@@ -229,38 +217,42 @@ h1 a, h1 a:visited {
 // bell
 .bell {
   background-color: $saxMainColor;
+  display: none;
+  float: left;
   height: 100%;
-  max-height: 300px;
-  position: absolute;
-  right: -29em;
-  top: 31em;
-  width: 24.5em;
+  margin-left: 2em;
+  position: relative;
+  width: 28.3em;
+
+  @media all and (min-width: 600px) {
+    display: block;
+  }
 }
 
-.cornerCover {
+.bellBackground {
   background-color: $adjacentColor;
+  height: 700px;
   position: absolute;
-  right: 0;
-  height: 2em;
-  width: 3em;
+  top: 0;
+  width: 28.3em;
 }
 
 .bellRim {
   background-color: $saxMainColor;
-  height: 4em;
-  margin: -1.7em 0 0 -2em;
-  position: relative;
+  height: 20%;
+  position: absolute;
+  top: 650px;
   transform: rotate(10deg);
-  width: 30em;
+  width: 35em;
 }
 
 .bellRimEdge {
   background-color: $saxMainColor;
   border: 1px solid $saxPearlBorder;
   height: .5em;
-  margin: -4em 0 0 -2em;
-  transform: rotate(10deg);
-  width: 31em;
+  position: absolute;
+  top: 0;
+  width: 35.5em;
 }
 
 .bellCurve {
@@ -272,14 +264,24 @@ h1 a, h1 a:visited {
 
 .bellCurveL {
   @extend .bellCurve;
-  margin-left: -.7em;
+  border-bottom-right-radius: 0;
+  margin: -.7em 0 0 -.7em;
   transform: skewX(10deg);
 }
 
 .bellCurveR {
   @extend .bellCurve;
+  border-bottom-right-radius: 0;
   position: absolute;
-  right: -.5em;
-  top: 0;
+  right: -.7em;
+  top: -.7em;
   transform: skewX(-10deg);
+}
+
+.bellCurveLowerL {
+  background-color: $adjacentColor;
+  height: 15em;
+  margin: -5em 0 0 .9em;
+  transform: skewX(10deg);
+  width: 6.2em;
 }

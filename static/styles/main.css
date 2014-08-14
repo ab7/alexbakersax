@@ -226,8 +226,7 @@ th {
 
 .content {
   background-color: #c70230;
-  font-family: "Noto Sans", sans-serif;
-  min-height: 650px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 a, a:visited {
@@ -238,8 +237,16 @@ fieldset {
   max-width: 380px;
 }
 
+h1 {
+  margin: 0;
+}
+
 .align-right {
   text-align: right;
+}
+
+.hideSection {
+  display: none;
 }
 
 .center {
@@ -477,15 +484,15 @@ html, body {
   left: 20px;
 }
 
-.saxBody {
+.saxBodyTop {
   background-color: #ffa622;
   color: #c70230;
+  float: left;
   height: 100%;
-  max-height: 1140px;
   max-width: 300px;
   padding-top: 1em;
   position: relative;
-  width: 75%;
+  width: 60%;
 }
 
 .saxRod {
@@ -506,30 +513,17 @@ html, body {
 
 .title {
   background-color: #ffa622;
-  padding: 15px;
-  max-width: 300px;
-  width: 75%;
-}
-
-.title2 {
-  margin-top: -1.5em;
-  max-width: 430px;
-  padding-right: 15px;
-  position: absolute;
-  right: -4em;
-  text-align: right;
-  top: -.5em;
-}
-
-h1 {
   color: #fff;
-  font-family: "Lobster";
-  font-size: 3.8em;
+  display: inline-block;
+  font: 2em "Lobster";
+  padding: 15px;
   margin: 0;
+  max-width: 300px;
   text-shadow: 3px 2px 0px #c70230;
+  width: 50%;
 }
 
-h1 a, h1 a:visited {
+.title h1 a, .title h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -540,7 +534,7 @@ h1 a, h1 a:visited {
 
 .altKeyPearl {
   height: 6em;
-  right: 10.5em;
+  right: 7em;
   top: -13em;
   width: 6em;
 }
@@ -556,13 +550,13 @@ h1 a, h1 a:visited {
   border-radius: 100%;
   height: 9em;
   position: absolute;
-  right: 6.5em;
+  right: 3em;
   width: 9em;
 }
 
 .bKeyPearl {
   height: 6em;
-  right: 6.5em;
+  right: 3em;
   top: 4em;
   width: 6em;
 }
@@ -571,7 +565,7 @@ h1 a, h1 a:visited {
   background-color: #d98302;
   height: 20px;
   position: absolute;
-  right: 12.5em;
+  right: 9em;
   top: 4.3em;
   width: 100%;
 }
@@ -587,14 +581,14 @@ h1 a, h1 a:visited {
   border-radius: 100%;
   height: 8em;
   position: absolute;
-  right: 6.8em;
+  right: 3.3em;
   top: -1.7em;
   width: 8em;
 }
 
 .bisKeyPearl {
   height: 4em;
-  right: 5.8em;
+  right: 2.3em;
   top: -3em;
   width: 4em;
 }
@@ -603,7 +597,7 @@ h1 a, h1 a:visited {
   background-color: #d98302;
   height: 20px;
   position: absolute;
-  right: 11.5em;
+  right: 8em;
   top: 2em;
   width: 100%;
 }
@@ -615,7 +609,7 @@ h1 a, h1 a:visited {
 
 .aKeyPearl {
   height: 6em;
-  right: 5.5em;
+  right: 2em;
   top: -9.5em;
   width: 6em;
 }
@@ -624,7 +618,7 @@ h1 a, h1 a:visited {
   background-color: #d98302;
   height: 20px;
   position: absolute;
-  right: 11.2em;
+  right: 7.7em;
   top: -7em;
   width: 100%;
 }
@@ -638,14 +632,14 @@ h1 a, h1 a:visited {
   border-radius: 100%;
   height: 9em;
   position: absolute;
-  right: 6em;
+  right: 1em;
   top: -2em;
   width: 9em;
 }
 
 .gKeyPearl {
   height: 6em;
-  right: 1.5em;
+  right: -2em;
   top: -4em;
   width: 6em;
 }
@@ -654,7 +648,7 @@ h1 a, h1 a:visited {
   background-color: #d98302;
   height: 20px;
   position: absolute;
-  right: 7.2em;
+  right: 3.7em;
   top: -2em;
   width: 100%;
 }
@@ -663,45 +657,50 @@ h1 a, h1 a:visited {
   background-color: #d98302;
   height: 20px;
   position: absolute;
-  right: 9.5em;
+  right: 6em;
   top: 2em;
   width: 100%;
 }
 
 .bell {
   background-color: #ffa622;
+  display: none;
+  float: left;
   height: 100%;
-  max-height: 300px;
-  position: absolute;
-  right: -29em;
-  top: 31em;
-  width: 24.5em;
+  margin-left: 2em;
+  position: relative;
+  width: 28.3em;
+}
+@media all and (min-width: 600px) {
+  .bell {
+    display: block;
+  }
 }
 
-.cornerCover {
+.bellBackground {
   background-color: #c70230;
+  height: 700px;
   position: absolute;
-  right: 0;
-  height: 2em;
-  width: 3em;
+  top: 0;
+  width: 28.3em;
 }
 
 .bellRim {
   background-color: #ffa622;
-  height: 4em;
-  margin: -1.7em 0 0 -2em;
-  position: relative;
+  height: 20%;
+  position: absolute;
+  top: 650px;
   transform: rotate(10deg);
-  width: 30em;
+  width: 35em;
 }
 
 .bellRimEdge {
   background-color: #ffa622;
   border: 1px solid #b78d20;
   height: .5em;
-  margin: -4em 0 0 -2em;
-  transform: rotate(10deg);
-  width: 31em;
+  position: absolute;
+  top: 0;
+  width: 35.5em;
 }
 
 .bellCurve, .bellCurveL, .bellCurveR {
@@ -712,158 +711,33 @@ h1 a, h1 a:visited {
 }
 
 .bellCurveL {
-  margin-left: -.7em;
+  border-bottom-right-radius: 0;
+  margin: -.7em 0 0 -.7em;
   transform: skewX(10deg);
 }
 
 .bellCurveR {
+  border-bottom-right-radius: 0;
   position: absolute;
-  right: -.5em;
-  top: 0;
+  right: -.7em;
+  top: -.7em;
   transform: skewX(-10deg);
 }
 
-.hello {
-  margin: auto;
-  padding: 15px;
-  width: 75%;
-}
-.hello img {
-  box-shadow: -3px, 3px, 0, 0, #ff6c22;
-  border-radius: 15px;
-  margin: 2em 1em .1em 0;
-  width: 50%;
+.bellCurveLowerL {
+  background-color: #c70230;
+  height: 15em;
+  margin: -5em 0 0 .9em;
+  transform: skewX(10deg);
+  width: 6.2em;
 }
 
-.textBox, .interestText, .liveText, .rightText {
-  color: #fff;
-  font: 1.2em "Righteous";
-  height: 40px;
-  padding-top: 1em;
-  width: 100%;
+.cover {
+  background-color: #c70230;
 }
 
-.liveText {
-  text-align: right;
-}
-
-.helloContent {
-  margin: 1em 0;
-}
-
-.contactLink {
-  background-color: #ff6c22;
-  border: 2em solid #9c0024;
-  border-radius: 100%;
-  height: 10em;
-  margin: auto;
-  position: relative;
-  width: 10em;
-}
-.contactLink a {
-  color: #fff;
-  font: 4em "Lobster";
-  left: -.7em;
-  position: absolute;
-  text-decoration: none;
-  top: .2em;
-}
-.contactLink a:hover {
-  color: #e05e5e;
-}
-
-.circleWrap span {
-  font: 1.1em Monaco, MonoSpace;
-  height: 4.7em;
-  position: absolute;
-  width: .5em;
-  left: 2.4em;
-  top: -1.8em;
-  transform-origin: bottom center;
-}
-
-.char1 {
-  transform: rotate(-57deg);
-}
-
-.char2 {
-  transform: rotate(-51deg);
-}
-
-.char3 {
-  transform: rotate(-45deg);
-}
-
-.char4 {
-  transform: rotate(-39deg);
-}
-
-.char5 {
-  transform: rotate(-33deg);
-}
-
-.char6 {
-  transform: rotate(-27deg);
-}
-
-.char7 {
-  transform: rotate(-21deg);
-}
-
-.char8 {
-  transform: rotate(-15deg);
-}
-
-.char9 {
-  transform: rotate(-9deg);
-}
-
-.char10 {
-  transform: rotate(-3deg);
-}
-
-.char11 {
-  transform: rotate(3deg);
-}
-
-.char12 {
-  transform: rotate(9deg);
-}
-
-.char13 {
-  transform: rotate(15deg);
-}
-
-.char14 {
-  transform: rotate(21deg);
-}
-
-.char15 {
-  transform: rotate(27deg);
-}
-
-.char16 {
-  transform: rotate(33deg);
-}
-
-.char17 {
-  transform: rotate(39deg);
-}
-
-.char18 {
-  transform: rotate(45deg);
-}
-
-.char19 {
-  transform: rotate(51deg);
-}
-
-.char20 {
-  transform: rotate(57deg);
-}
-
-.char21 {
-  transform: rotate(63deg);
+.image {
+  width: 25%;
 }
 
 .adminWrapper {
