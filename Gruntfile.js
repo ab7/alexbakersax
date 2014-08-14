@@ -16,8 +16,8 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         src: [ 'static/js/vendor/*.js', 'static/js/main.js'],
-        dest: 'static/js/main.built.js',
-      },
+        dest: 'static/js/main.built.js'
+      }
     },
     cssmin : {
       css: {
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
         tasks: ['sass', 'autoprefixer', 'cssmin']
       },
       js: {
-        files: ['static/js/main.js', 'static/js/**/*.js'],
+        files: ['static/js/main.js', 'static/js/vendor/*.js'],
         tasks: ['concat', 'uglify']
       }
     }
