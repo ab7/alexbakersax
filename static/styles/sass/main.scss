@@ -3,14 +3,13 @@
 @import 'base/globals';
 @import 'base/helpers';
 
-
 // vendor
 @import 'vendor/jquery.fullPage';
-
 
 // partials
 @import 'partials/sax';
 @import 'partials/new-student';
+@import 'partials/materials';
 @import 'partials/admin';
 @import 'partials/forms';
 @import 'partials/student';

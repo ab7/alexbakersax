@@ -227,6 +227,12 @@ th {
 .content {
   background-color: #c70230;
   font-family: 'Noto Sans', sans-serif;
+  overflow: scroll;
+}
+@media all and (min-width: 768px) {
+  .content {
+    overflow: hidden;
+  }
 }
 
 a, a:visited {
@@ -293,7 +299,6 @@ h1 {
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: transparent;
 }
@@ -485,12 +490,17 @@ html, body {
 .saxBodyTop {
   background-color: #ffa622;
   color: #c70230;
+  display: none;
   float: left;
   height: 100%;
   max-width: 300px;
-  padding-top: 1em;
   position: relative;
   width: 60%;
+}
+@media all and (min-width: 500px) {
+  .saxBodyTop {
+    display: block;
+  }
 }
 
 .saxRod {
@@ -512,18 +522,33 @@ html, body {
 .title {
   background-color: #ffa622;
   color: #fff;
-  display: inline-block;
   font: 2em "Lobster";
-  padding: 15px;
-  margin: 0;
-  max-width: 300px;
+  padding: 0 15px 1em;
+  position: relative;
   text-shadow: 3px 2px 0px #c70230;
-  width: 50%;
+  width: 100%;
+}
+@media all and (min-width: 500px) {
+  .title {
+    max-width: 300px;
+    width: 60%;
+  }
 }
 
 .title h1 a, .title h1 a:visited {
   color: #fff;
   text-decoration: none;
+}
+
+.lessonTitle {
+  text-align: right;
+}
+@media all and (min-width: 500px) {
+  .lessonTitle {
+    position: absolute;
+    left: 4em;
+    z-index: 10;
+  }
 }
 
 .altKey {
@@ -663,35 +688,42 @@ html, body {
 .bell {
   background-color: #ffa622;
   display: none;
-  float: left;
   height: 100%;
-  margin-left: 2em;
   position: relative;
-  width: 28.3em;
+  width: 28.8em;
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 500px) {
   .bell {
     display: block;
+    position: absolute;
+    left: 21em;
+    bottom: -5.5em;
   }
 }
 
 .bellBackground {
   background-color: #c70230;
-  height: 700px;
+  height: 600px;
   position: absolute;
   top: 0;
-  width: 28.3em;
+  width: 29em;
+}
+
+.bellBackgroundL {
+  background-color: #c70230;
+  height: 100%;
+  width: 5.4em;
 }
 
 .bellRim {
   background-color: #ffa622;
-  height: 20%;
+  height: 200px;
   position: absolute;
-  top: 650px;
+  top: 540px;
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
-  width: 35em;
+  width: 35.5em;
 }
 
 .bellRimEdge {
@@ -707,12 +739,13 @@ html, body {
   background-color: #c70230;
   border-radius: 100%;
   height: 15em;
-  width: 6em;
+  width: 6.3em;
 }
 
 .bellCurveL {
   border-bottom-right-radius: 0;
-  margin: -.7em 0 0 -.7em;
+  border-bottom-left-radius: 0;
+  margin: -.7em 0 0 -1em;
   -webkit-transform: skewX(10deg);
   -ms-transform: skewX(10deg);
   transform: skewX(10deg);
@@ -720,22 +753,13 @@ html, body {
 
 .bellCurveR {
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 94%;
   position: absolute;
-  right: -.7em;
+  right: -1em;
   top: -.7em;
   -webkit-transform: skewX(-10deg);
   -ms-transform: skewX(-10deg);
   transform: skewX(-10deg);
-}
-
-.bellCurveLowerL {
-  background-color: #c70230;
-  height: 15em;
-  margin: -5em 0 0 .9em;
-  -webkit-transform: skewX(10deg);
-  -ms-transform: skewX(10deg);
-  transform: skewX(10deg);
-  width: 6.2em;
 }
 
 .cover {
@@ -744,6 +768,74 @@ html, body {
 
 .image {
   width: 25%;
+}
+
+.firstTimers {
+  background-color: rgba(255, 108, 34, 0.53);
+  border-radius: 2em;
+  margin: 0.8em;
+  padding: 1.5em;
+}
+
+.firstTimers p {
+  margin-left: 0;
+}
+
+.materialGrid {
+  margin-top: 15px;
+  min-width: 100%;
+}
+
+.materialPic {
+  width: 2.5em;
+}
+
+.descripCell {
+  width: 80%;
+}
+
+.altoTenor {
+  background-color: #ff6c22;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+.clickHere {
+  background-color: #c74000;
+  border-radius: 100px;
+  border: 1px solid rgba(170, 170, 170, 0.44);
+  color: #fff;
+  cursor: pointer;
+  font: 1em Verdana;
+  padding: 4px 12px;
+  outline: none;
+  width: 95%;
+}
+
+.clickHere:hover {
+  border-color: #8dff96;
+  color: #8dff96;
+  box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
+}
+
+.cellColor {
+  background-color: rgba(255, 108, 34, 0.27);
+}
+
+.appCell {
+  background-color: #ff6c22;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+th {
+  background-color: rgba(255, 108, 34, 0.62);
+  font-family: "Raleway";
+  padding: 1%;
+}
+
+td {
+  font-size: .7em;
+  padding: 3px 5px;
+  text-align: left;
 }
 
 .adminWrapper {

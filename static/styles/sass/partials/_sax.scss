@@ -5,30 +5,31 @@ $saxPearlColor: rgb(255, 248, 240);
 $saxPearlBorder: rgb(183, 141, 32);
 $saxArmColor: #D98302;
 
-
 // sizes
 $mainKey: 9em;
 $bigKey: 6em;
 $smallKey: 4em;
 $armWidth: 20px;
 
-
 // positions
 $keyPosR: 6em;
 $keyPosT: 2em;
 $armLen: 100%;
 
-
 // sax top main styles
 .saxBodyTop {
   background-color: $saxMainColor;
   color: $adjacentColor;
+  display: none;
   float: left;
   height: 100%;
   max-width: 300px;
-  padding-top: 1em;
   position: relative;
   width: 60%;
+
+  @media all and (min-width: 500px){
+    display: block;
+  }
 }
 
 .saxRod {
@@ -50,13 +51,16 @@ $armLen: 100%;
 .title {
   background-color: $saxMainColor;
   color: #fff;
-  display: inline-block;
   font: 2em $titleFont;
-  padding: 15px;
-  margin: 0;
-  max-width: 300px;
+  padding: 0 15px 1em;
+  position: relative;
   text-shadow: 3px 2px 0px $textShadowColor;
-  width: 50%;
+  width: 100%;
+
+  @media all and (min-width: 500px) {
+    max-width: 300px;
+    width: 60%;
+  }
 }
 
 .title h1 a, .title h1 a:visited {
@@ -64,6 +68,15 @@ $armLen: 100%;
   text-decoration: none;
 }
 
+.lessonTitle {
+  text-align: right;
+
+  @media all and (min-width: 500px) {
+    position: absolute;
+    left: 4em;
+    z-index: 10;
+  }
+}
 
 // alt key
 .altKey {
@@ -77,7 +90,6 @@ $armLen: 100%;
   top: $keyPosT - 15;
   width: $bigKey;
 }
-
 
 // b key
 .bKey {
@@ -111,7 +123,6 @@ $armLen: 100%;
   top: $keyPosT + 2.3;
   width: $armLen;
 }
-
 
 // bis key
 .bisKey {
@@ -147,7 +158,6 @@ $armLen: 100%;
   width: $armLen;
 }
 
-
 // a key
 .aKey {
   margin-top: 1.3em;
@@ -170,7 +180,6 @@ $armLen: 100%;
   top: $keyPosT - 9;
   width: $armLen;
 }
-
 
 // a key
 .gKey {
@@ -213,37 +222,44 @@ $armLen: 100%;
   width: $armLen;
 }
 
-
 // bell
 .bell {
   background-color: $saxMainColor;
   display: none;
-  float: left;
   height: 100%;
-  margin-left: 2em;
   position: relative;
-  width: 28.3em;
+  width: 28.8em;
 
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 500px) {
     display: block;
+    position: absolute;
+    left: 21em;
+    bottom: -5.5em;
   }
+
 }
 
 .bellBackground {
   background-color: $adjacentColor;
-  height: 700px;
+  height: 600px;
   position: absolute;
   top: 0;
-  width: 28.3em;
+  width: 29em;
+}
+
+.bellBackgroundL {
+  background-color: $adjacentColor;
+  height: 100%;
+  width: 5.4em;
 }
 
 .bellRim {
   background-color: $saxMainColor;
-  height: 20%;
+  height: 200px;
   position: absolute;
-  top: 650px;
+  top: 540px;
   transform: rotate(10deg);
-  width: 35em;
+  width: 35.5em;
 }
 
 .bellRimEdge {
@@ -259,29 +275,23 @@ $armLen: 100%;
   background-color: $adjacentColor;
   border-radius: 100%;
   height: 15em;
-  width: 6em;
+  width: 6.3em;
 }
 
 .bellCurveL {
   @extend .bellCurve;
   border-bottom-right-radius: 0;
-  margin: -.7em 0 0 -.7em;
+  border-bottom-left-radius: 0;
+  margin: -.7em 0 0 -1em;
   transform: skewX(10deg);
 }
 
 .bellCurveR {
   @extend .bellCurve;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 94%;
   position: absolute;
-  right: -.7em;
+  right: -1em;
   top: -.7em;
   transform: skewX(-10deg);
-}
-
-.bellCurveLowerL {
-  background-color: $adjacentColor;
-  height: 15em;
-  margin: -5em 0 0 .9em;
-  transform: skewX(10deg);
-  width: 6.2em;
 }

@@ -2,70 +2,204 @@
 
 {% block content %}
   <div id="fullpage">
-    <div class="section" id="section0">
-      <div class="saxBodyTop">
+    <div class="section">
+      <div class="slide">
         <div class="title">
           <h1>
             <a href="/">
-              Saxophone Lessons
+              Saxophone
+            </a>
+          </h1>
+          <h1 class="lessonTitle">
+            <a href="/">
+              Lessons
             </a>
           </h1>
         </div>
-        <div class="saxRod"></div>
-        <div class="bKey">
-          <div class="bKeyMain"></div>
-          <button class="bKeyPearl">
-            New Student Info
-          </button>
-          <div class="bKeyArm"></div>
+        <div class="saxBodyTop">
+          <div class="saxRod"></div>
+          <div class="bKey">
+            <div class="bKeyMain"></div>
+            <button class="bKeyPearl">
+              New Student Info
+            </button>
+            <div class="bKeyArm"></div>
+          </div>
+          <div class="altKey">
+            <button class="altKeyPearl">
+              Student Login
+            </button>
+          </div>
+          <div class="bisKey">
+            <div class="bisKeyMain"></div>
+            <div class="bisKeyPearl"></div>
+            <div class="bisKeyArm"></div>
+          </div>
+          <div class="aKey">
+            <div class="aKeyArm"></div>
+            <button class="aKeyPearl">
+              Materials
+            </button>
+          </div>
+          <div class="gKey">
+            <div class="gKeyMain"></div>
+            <div class="gKeyArm"></div>
+            <div class="gMainArm"></div>
+            <button class="gKeyPearl">
+              Contact
+            </button>
+          </div>
         </div>
-        <div class="altKey">
-          <button class="altKeyPearl">
-            Student Login
-          </button>
-        </div>
-        <div class="bisKey">
-          <div class="bisKeyMain"></div>
-          <div class="bisKeyPearl"></div>
-          <div class="bisKeyArm"></div>
-        </div>
-        <div class="aKey">
-          <div class="aKeyArm"></div>
-          <button class="aKeyPearl">
-            Materials
-          </button>
-        </div>
-        <div class="gKey">
-          <div class="gKeyMain"></div>
-          <div class="gKeyArm"></div>
-          <div class="gMainArm"></div>
-          <button class="gKeyPearl">
-            Contact
-          </button>
+        <div class="bell">
+          <div class="bellBackgroundL"></div>
+          <div class="bellBackground"></div>
+          <div class="bellRim">
+            <div class="bellCurveL"></div>
+            <div class="bellCurveR"></div>
+            <div class="bellRimEdge"></div>
+          </div>
         </div>
       </div>
-      <div class="bell">
-        <div class="bellBackground"></div>
-        <div class="bellRim">
-          <div class="bellCurveL"></div>
-          <div class="bellCurveR"></div>
-          <div class="bellCurveLowerL"></div>
-          <div class="bellRimEdge"></div>
+      <div class="slide">
+        <h1>New Student Info</h1>
+        <img class="image" src="static/img/alex_teaching.jpg" alt="Alex teaching a lesson">
+        <h3>First Lesson</h3>
+        <div>
+          For our first lesson, make sure to bring any music you are working on or have worked on. We will spend some time getting to know each other and talk about your musical goals. If its your first time playing the sax, you can wait until the lesson to put your sax together with my help or you can check out the videos on this page.
         </div>
+        <div id="vidWrapper">
+          <h3>How to put your sax together</h3>
+          <iframe class="vidHolder" src="//www.youtube.com/embed/rGct7vUNhNw" allowfullscreen></iframe>
+          <h3>How to clean your sax</h3>
+          <iframe class="vidHolder" src="//www.youtube.com/embed/EvN-m8bbDpQ" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="slide">
+        <h1>Materials</h1>
+        <div id="materialsWrapper">
+          <p>
+           I highly recommend getting everything on this list of materials. At the very least, get the Essential Elements 2000 book and all the cleaning supplies.
+          </p>
+          <table class="materialGrid">
+            <tr>
+              <th class="lightGrad" colspan="2">Books</th>
+              <th class="altoTenor">Alto</th>
+              <th class="altoTenor">Tenor</th>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/ee2000-1.jpg" alt="Essential Elements 2000 Book 1">
+              </td>
+              <td class="descripCell">Essential Elements 2000 Book 1</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Hal-Leonard-Essential-Elements-For-Band---Alto-Saxophone-Book-1-With-EEi--Book-CD-ROM--941590-i1161418.wwbw" target="_blank">Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Hal-Leonard-Essential-Elements-For-Band---Tenor-Saxophone-Book-1-With-EEi--Book-CD-ROM--941591-i1161419.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/belwin.jpg" alt="Belwin Master Duets for Saxophone">
+              </td>
+              <td class="descripCell">Belwin Master Duets for Saxophone</td>
+              <td class="cellColor center" colspan="2">
+                <a class="clickHere" href="//www.wwbw.com/Alfred-Belwin-Master-Duets--Saxophone--Easy-Volume-1-H62754-i1558425.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/maiden.jpg" alt="Maiden Voyage">
+              </td>
+              <td class="descripCell">Maiden Voyage: Fourteen Easy-To-Play Jazz Tunes</td>
+              <td class="cellColor center" colspan="2">
+                <a class="clickHere" href="//www.wwbw.com/Jamey-Aebersold-Maiden-Voyage-Book-CD-906634-i1368412.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <th class="lightGrad" colspan="2">Cleaning</th>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/body_swab.jpg" alt="body swab">
+              </td>
+              <td class="descripCell">Silk Body Swab</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Hodge-Alto-Sax-Silk-Swab-425604-i1134847.wwbw" target="_blank">Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Hodge-Tenor-Sax-Silk-Swab-425612-i1134855.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/mouthpiece_swab.jpg" alt="mouthpiece swab">
+              </td>
+              <td>Mouthpiece Swab</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/La-Voz-Woodwind-Mouthpiece-Savers-483896-i1442564.wwbw" target="_blank">Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/La-Voz-Woodwind-Mouthpiece-Savers-483896-i1442564.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <th class="lightGrad" colspan="2">Reeds</th>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/vandoren_reg.jpg" alt="Vandoran Regular reeds">
+              </td>
+              <td class="descripCell">Vandoran Regular Size 1.5</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Vandoren-Alto-Saxophone-Reeds-462581-i1143259.wwbw" target="_blank">Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//www.wwbw.com/Vandoren-Tenor-Saxophone-Reeds-462591-i1143308.wwbw" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <th class="lightGrad" colspan="2">Apps</th>
+              <th class="appCell">Android</th>
+              <th class="appCell">iPhone</th>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/tuner.png" alt="Tuner">
+              </td>
+              <td class="descripCell">Tuner</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//play.google.com/store/apps/details?id=com.bork.dsp.datuna" target="_blank">Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//itunes.apple.com/us/app/free-chromatic-tuner-pano/id449780743?mt=8" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="materialPic" src="static/img/metronome.png" alt="Metronome">
+              </td>
+              <td>Metronome</td>
+              <td class="cellColor">
+                <a class="clickHere" href="//play.google.com/store/apps/details?id=gabriel.metronome" target="_blank">
+                  Link</a>
+              </td>
+              <td class="cellColor">
+                <a class="clickHere" href="//itunes.apple.com/us/app/pro-metronome-beat-sound-light/id477960671?mt=8" target="_blank">
+                  Link</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="slide">
+        <h1>Contact</h1>
+        <img id="alexPic" src="static/img/alex_baker.jpg" alt="Alex Baker">
+        <h2>Alex Baker</h2>
+        <p>
+          Alex is a graduate of the Lamont School of Music at the University of Denver, where he earned a Bachelors of Music Performance degree. He has spent time traveling the US and abroad, contributing his musical expertise to numerous projects. Alex has a strong background in performing varied musical styles, including classical, jazz, funk, salsa, ska, rock and pop. With extensive experience playing soprano, alto, tenor, baritone saxophone and doubling on flute and clarinet, Alex has taught many students and groups ranging in age and skill level over the last ten years.
+        </p>
       </div>
     </div>
-    <div class="section" id="section1">
-      <h2>New Student Info</h2>
-      <img class="image" src="static/img/alex_teaching.jpg" alt="Alex teaching a lesson">
-      <h3>First Lesson</h3>
-      <div>
-        For our first lesson, make sure to bring any music you are working on or have worked on. We will spend some time getting to know each other and talk about your musical goals. If its your first time playing the sax, you can wait until the lesson to put your sax together with my help or you can check out the videos on this page.
-      </div>
-      <h3>Teaching Philosophy</h3>
-      <div>
-        Basic theory and the ability to read music are essential to starting your journey with the saxophone. A good amount of time will also be spent learning music by ear. Music is mostly an aural activity, so training your ear is also important. The unique, melodic sound of the saxophone allows it to intregrate wonderfully with many styles of music. The most popular genres for sax are jazz, pop, and classical, but you can play anything that catches your ear. If you enjoy the music from a particular movie or a favorite video game, playing it on saxophone can be incredibly fun and rewarding. Gaining a deeper appreciation for music through the saxophone, or any other instrument, will benefit you for the rest of your life.
-      </div>
-    </div>
-    <div class="section" id="section2"></div>
   </div>
 {% endblock %}
