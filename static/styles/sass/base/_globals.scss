@@ -10,6 +10,9 @@ $adjacentColor: #C70230;
 $adjacentColorDark: #9C0024;
 $textShadowColor: #C70230;
 
+// media query thresholds
+$firstMedia: 500px;
+
 // base styles
 .content {
   background-color: $adjacentColor;
@@ -18,6 +21,26 @@ $textShadowColor: #C70230;
 
   @media all and (min-width: 768px) {
     overflow: hidden;
+  }
+}
+
+.pageWrapper {
+  margin: auto;
+  padding: 0 15px;
+
+  @media all and (min-width: $firstMedia) {
+    width: 70%;
+  }
+}
+
+.contentWrapper {
+  display: inline-block;
+
+  @media all and (min-width: $firstMedia) {
+
+    height: 100%;
+    margin: 0 1em;
+    width: 45%;
   }
 }
 
@@ -30,5 +53,20 @@ fieldset {
 }
 
 h1 {
+  color: #fff;
+  font: 2.5em $titleFont;
   margin: 0;
+  text-shadow: 3px 2px 0px $textShadowColor;
+
+  a, a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
 }
+
+h2 {
+  color: $mainColor;
+  font: 2em $buttonFont;
+  margin: 1em 0 0 0;
+}
+
