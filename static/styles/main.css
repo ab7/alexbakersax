@@ -241,18 +241,20 @@ th {
 }
 @media all and (min-width: 500px) {
   .pageWrapper {
-    width: 70%;
+    padding: 0;
+    width: 80%;
   }
 }
 
 .contentWrapper {
   display: inline-block;
+  vertical-align: top;
 }
 @media all and (min-width: 500px) {
   .contentWrapper {
     height: 100%;
     margin: 0 1em;
-    width: 45%;
+    width: 34%;
   }
 }
 

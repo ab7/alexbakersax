@@ -29,18 +29,19 @@ $firstMedia: 500px;
   padding: 0 15px;
 
   @media all and (min-width: $firstMedia) {
-    width: 70%;
+    padding: 0;
+    width: 80%;
   }
 }
 
 .contentWrapper {
   display: inline-block;
+  vertical-align: top;
 
   @media all and (min-width: $firstMedia) {
-
     height: 100%;
     margin: 0 1em;
-    width: 45%;
+    width: 34%;
   }
 }
 
