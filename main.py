@@ -204,12 +204,19 @@ class AddNotes(Handler):
         user_key = self.request.get('key')
         student = ds.get_student(user_key)
         latest_notes = ds.get_latest_notes(user_key)
-        self.render(
-            'addnotes.html',
-            student = student,
+        if latest_notes:
             warmup_prev = latest_notes.warmup,
             assign_prev = latest_notes.assign,
-            tips_prev = latest_notes.tips)
+            tips_prev = latest_notes.tips
+            self.render(
+                'addnotes.html',
+                student = student,
+                warmup_prev = warmup_prev,
+                assign_prev = assign_prev,
+                tips_prev = tips_prev
+            )
+        else:
+            self.render('addnotes.html', student = student)
 
     def post(self):
         student = self.request.get('key')

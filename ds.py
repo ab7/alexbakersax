@@ -51,7 +51,7 @@ def get_single_note(user_key, note_key):
 
 def get_latest_notes(user_key):
     all_notes = get_notes(user_key)
-    return all_notes.fetch(1)[0]
+    return all_notes.fetch(1)
 
 
 ### write functions ###
