@@ -7,7 +7,6 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 ### Todo
 
-* JS fallback
 * Style backend pages
 * Add music note css
 * Animate sax keys
