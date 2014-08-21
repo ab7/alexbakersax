@@ -6,9 +6,9 @@ function widthChange(mq) {
   var hash;
   hash = window.location.hash;
   if (mq.matches) {
-    // window width is at least 500px
-    window.location.hash = '#full';
+    //window.location.hash = '#full';
     $('#fullpage').fullpage({
+      anchors:['full', 'new-student-info', 'materials', 'contact'],
       css3: true,
       loopHorizontal: false,
       resize: false,
@@ -32,5 +32,6 @@ $(document).ready(function () {
     mq.addListener(widthChange);
     widthChange(mq);
   }
+
   $('.circleWrap').lettering();
 });
