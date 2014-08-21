@@ -902,21 +902,23 @@ td {
   color: #fff;
   background-color: purple;
   border: 5px solid red;
-  border-radius: 100%;
+  border-radius: 15px;
   display: block;
   font: 1em "Lobster";
-  height: 10em;
-  margin: 2em auto;
-  width: 10em;
+  margin: 1em;
 }
 
 .setupLesson {
-  padding: 25px;
+  background-color: purple;
+  border: 5px solid red;
+  border-radius: 20px;
+  padding: 35px;
   text-align: center;
 }
 
 .setupLesson h3 {
-  font-size: 150%;
+  color: #fff;
+  font: 250% "Lobster";
 }
 
 .firstTimers {
@@ -993,12 +995,10 @@ td {
   color: #fff;
   background-color: purple;
   border: 5px solid red;
-  border-radius: 100%;
+  border-radius: 15px;
   display: block;
   font: 1em "Lobster";
-  height: 10em;
-  margin: 2em auto;
-  width: 10em;
+  margin: 1em;
 }
 
 .adminWrapper {
