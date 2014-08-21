@@ -6,9 +6,10 @@ function widthChange(mq) {
   var hash;
   hash = window.location.hash;
   if (mq.matches) {
-    //window.location.hash = '#full';
+    $('.saxBodyTop').show();
+    $('.title').css({'margin': 0, 'max-width': '300px'});
     $('#fullpage').fullpage({
-      anchors:['full', 'new-student-info', 'materials', 'contact'],
+      anchors: ['full', 'new-student-info', 'materials', 'contact'],
       css3: true,
       loopHorizontal: false,
       resize: false,

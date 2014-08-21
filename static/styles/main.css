@@ -564,11 +564,6 @@ html, body {
   position: relative;
   width: 300px;
 }
-@media all and (min-width: 500px) {
-  .saxBodyTop {
-    display: block;
-  }
-}
 
 .saxRod {
   background-color: #d98302;
@@ -579,7 +574,7 @@ html, body {
 }
 
 .pearl, .altKeyPearl, .bKeyPearl, .bisKeyPearl, .aKeyPearl, .gKeyPearl {
-  color: #c70230;
+  color: #ff6c22;
   background-color: #fff8f0;
   border: 3px solid #b78d20;
   border-radius: 100%;
@@ -597,9 +592,7 @@ html, body {
 }
 @media all and (min-width: 500px) {
   .title {
-    max-width: 300px;
-    margin-bottom: 0;
-    width: 60%;
+    margin-bottom: 3em;
   }
 }
 
