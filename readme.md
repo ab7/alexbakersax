@@ -1,4 +1,4 @@
-# Private Lesson Portal Prototype
+# Sax Lessons
 
 ### The Lowdown
 
@@ -7,7 +7,9 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 ### Todo
 
-* Same page login with js
-* Fix image sizes
-* Modular note options
-* Grunt Watch LiveReload
+* JS fallback
+* Style backend pages
+* Add music note css
+* Animate sax keys
+* Same page login
+* Refactor materials grid
