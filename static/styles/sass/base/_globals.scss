@@ -12,36 +12,47 @@ $textShadowColor: #C70230;
 
 // media query thresholds
 $firstMedia: 500px;
+$secondMedia: 700px;
 
 // base styles
 .content {
   background-color: $adjacentColor;
+  color: #ff9a67;
   font-family: 'Noto Sans', sans-serif;
   overflow: scroll;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 500px) {
     overflow: hidden;
   }
 }
 
 .pageWrapper {
-  margin: auto;
-  padding: 0 15px;
+  background-color: $adjacentColorDark;
+  border-radius: 15px;
+  height: 100%;
+  margin: 0 auto 2em;
+  padding: 15px;
+  width: 90%;
 
   @media all and (min-width: $firstMedia) {
-    padding: 0;
+    border-radius: 5em;
+    padding: 2em;
+    text-align: center;
     width: 80%;
   }
 }
 
 .contentWrapper {
-  display: inline-block;
+  display: block;
+  margin-bottom: 2em;
   vertical-align: top;
 
   @media all and (min-width: $firstMedia) {
+    display: inline-block;
     height: 100%;
-    margin: 0 1em;
-    width: 34%;
+    margin: 2em 2em 0 0;
+    text-align: left;
+    width: 40%;
   }
 }
 
@@ -57,17 +68,38 @@ h1 {
   color: #fff;
   font: 2.5em $titleFont;
   margin: 0;
-  text-shadow: 3px 2px 0px $textShadowColor;
+  text-shadow: 3px 2px 0px $mainColor;
 
   a, a:visited {
     color: #fff;
     text-decoration: none;
+  }
+
+  @media all and (min-width: $secondMedia) {
+    font-size: 350%;
   }
 }
 
 h2 {
   color: $mainColor;
   font: 2em $buttonFont;
-  margin: 1em 0 0 0;
+  margin: .5em 0 .5em 10%;
+
+  @media all and (min-width: $secondMedia) {
+    font-size: 350%;
+  }
 }
 
+h3 {
+  color: $mainColor;
+  font-family: $buttonFont;
+  margin: 0;
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px 0px $mainColor;
+  margin: 0 5% 0 0;
+  float: left;
+  width: 50%;
+}

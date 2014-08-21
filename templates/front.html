@@ -3,7 +3,7 @@
 {% block content %}
   <div id="fullpage">
     <div class="section">
-      <div class="slide">
+      <div class="slide" data-anchor="full">
         <div class="title">
           <h1>
             <a href="/">
@@ -60,9 +60,9 @@
           </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="slide" data-anchor="new-student-info">
+        <h2>New Student Info</h2>
         <div class="pageWrapper">
-          <h2>New Student Info</h2>
           <div class="contentWrapper">
             <img class="image" src="static/img/alex_teaching.jpg" alt="Alex teaching a lesson">
             <h3>First Lesson</h3>
@@ -71,18 +71,16 @@
             </div>
           </div>
           <div class="contentWrapper">
-            <div id="vidWrapper">
-              <h3>How to put your sax together</h3>
-              <iframe class="vidHolder" src="//www.youtube.com/embed/rGct7vUNhNw" allowfullscreen></iframe>
-              <h3>How to clean your sax</h3>
-              <iframe class="vidHolder" src="//www.youtube.com/embed/EvN-m8bbDpQ" allowfullscreen></iframe>
-            </div>
+            <h3>How to put your sax together</h3>
+            <iframe class="vid" src="//www.youtube.com/embed/rGct7vUNhNw" allowfullscreen></iframe>
+            <h3>How to clean your sax</h3>
+            <iframe class="vid" src="//www.youtube.com/embed/EvN-m8bbDpQ" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="slide" data-anchor="materials">
+        <h2>Materials</h2>
         <div class="pageWrapper">
-          <h2>Materials</h2>
           <div class="contentWrapper">
             <div id="materialsWrapper">
               <div>
@@ -217,12 +215,15 @@
           </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="slide" data-anchor="contact">
+        <h2>Contact</h2>
         <div class="pageWrapper">
-          <h2>Contact</h2>
           <div class="contentWrapper">
-            <div>email: alexbakersax@gmail.com</div>
-            <div>phone: 720-530-4275</div>
+            <div class="setupLesson">
+              <h3>Contact me anytime to set up a lesson!</h3>
+              <div>email: alexbakersax@gmail.com</div>
+              <div>phone: 720-530-4275</div>
+            </div>
           </div>
           <div class="contentWrapper">
             <img class="image" src="static/img/alex_baker.jpg" alt="Alex Baker">

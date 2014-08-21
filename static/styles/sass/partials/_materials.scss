@@ -68,3 +68,15 @@ td {
   padding: 3px 5px;
   text-align: left;
 }
+
+.comFolderLink {
+  color: #fff;
+  background-color: purple;
+  border: 5px solid red;
+  border-radius: 100%;
+  display: block;
+  font: 1em $titleFont;
+  height: 10em;
+  margin: 2em auto;
+  width: 10em;
+}

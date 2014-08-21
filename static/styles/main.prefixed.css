@@ -226,35 +226,45 @@ th {
 
 .content {
   background-color: #c70230;
+  color: #ff9a67;
   font-family: 'Noto Sans', sans-serif;
   overflow: scroll;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 500px) {
   .content {
     overflow: hidden;
   }
 }
 
 .pageWrapper {
-  margin: auto;
-  padding: 0 15px;
+  background-color: #9c0024;
+  border-radius: 15px;
+  height: 100%;
+  margin: 0 auto 2em;
+  padding: 15px;
+  width: 90%;
 }
 @media all and (min-width: 500px) {
   .pageWrapper {
-    padding: 0;
+    border-radius: 5em;
+    padding: 2em;
+    text-align: center;
     width: 80%;
   }
 }
 
 .contentWrapper {
-  display: inline-block;
+  display: block;
+  margin-bottom: 2em;
   vertical-align: top;
 }
 @media all and (min-width: 500px) {
   .contentWrapper {
+    display: inline-block;
     height: 100%;
-    margin: 0 1em;
-    width: 34%;
+    margin: 2em 2em 0 0;
+    text-align: left;
+    width: 40%;
   }
 }
 
@@ -270,17 +280,41 @@ h1 {
   color: #fff;
   font: 2.5em "Lobster";
   margin: 0;
-  text-shadow: 3px 2px 0px #c70230;
+  text-shadow: 3px 2px 0px #ff6c22;
 }
 h1 a, h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
+@media all and (min-width: 700px) {
+  h1 {
+    font-size: 350%;
+  }
+}
 
 h2 {
   color: #ff6c22;
   font: 2em "Righteous";
-  margin: 1em 0 0 0;
+  margin: .5em 0 .5em 10%;
+}
+@media all and (min-width: 700px) {
+  h2 {
+    font-size: 350%;
+  }
+}
+
+h3 {
+  color: #ff6c22;
+  font-family: "Righteous";
+  margin: 0;
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px 0px #ff6c22;
+  margin: 0 5% 0 0;
+  float: left;
+  width: 50%;
 }
 
 .align-right {
@@ -322,9 +356,6 @@ h2 {
   box-sizing: border-box;
 }
 
-/** {
-  outline: 1px solid red;
-}*/
 /**
  * fullPage 2.1.9
  * https://github.com/alvarotrigo/fullPage.js
@@ -802,12 +833,10 @@ html, body {
   transform: skewX(-10deg);
 }
 
-.cover {
-  background-color: #c70230;
-}
-
-.image {
-  width: 25%;
+.vid {
+  display: block;
+  height: 25%;
+  margin: .5em auto 2em;
 }
 
 .firstTimers {
@@ -878,12 +907,114 @@ td {
   text-align: left;
 }
 
+.comFolderLink {
+  color: #fff;
+  background-color: purple;
+  border: 5px solid red;
+  border-radius: 100%;
+  display: block;
+  font: 1em "Lobster";
+  height: 10em;
+  margin: 2em auto;
+  width: 10em;
+}
+
+.setupLesson {
+  padding: 25px;
+  text-align: center;
+}
+
+.setupLesson h3 {
+  font-size: 150%;
+}
+
+.firstTimers {
+  background-color: rgba(255, 108, 34, 0.53);
+  border-radius: 2em;
+  margin: 0.8em;
+  padding: 1.5em;
+}
+
+.firstTimers p {
+  margin-left: 0;
+}
+
+.materialGrid {
+  margin-top: 15px;
+  min-width: 100%;
+}
+
+.materialPic {
+  width: 2.5em;
+}
+
+.descripCell {
+  width: 80%;
+}
+
+.altoTenor {
+  background-color: #ff6c22;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+.clickHere {
+  background-color: #c74000;
+  border-radius: 100px;
+  border: 1px solid rgba(170, 170, 170, 0.44);
+  color: #fff;
+  cursor: pointer;
+  font: 1em Verdana;
+  padding: 4px 12px;
+  outline: none;
+  width: 95%;
+}
+
+.clickHere:hover {
+  border-color: #8dff96;
+  color: #8dff96;
+  box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
+}
+
+.cellColor {
+  background-color: rgba(255, 108, 34, 0.27);
+}
+
+.appCell {
+  background-color: #ff6c22;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+}
+
+th {
+  background-color: rgba(255, 108, 34, 0.62);
+  font-family: "Raleway";
+  padding: 1%;
+}
+
+td {
+  font-size: .7em;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.comFolderLink {
+  color: #fff;
+  background-color: purple;
+  border: 5px solid red;
+  border-radius: 100%;
+  display: block;
+  font: 1em "Lobster";
+  height: 10em;
+  margin: 2em auto;
+  width: 10em;
+}
+
 .adminWrapper {
   margin: auto;
   width: 90%;
 }
 
 .adminWrapper h2, .adminWrapper nav {
+  margin: 0;
   padding: .3em;
   text-align: center;
 }
