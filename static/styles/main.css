@@ -1,3 +1,202 @@
+/**
+ * fullPage 2.1.9
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+#superContainer {
+  height: 100%;
+  position: relative;
+  /* Touch detection for Windows 8 */
+  -ms-touch-action: none;
+  /* IE 11 on Windows Phone 8.1*/
+  touch-action: none;
+}
+
+.fp-section {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  /* Safari<=5 Android<=3 */
+  -moz-box-sizing: border-box;
+  /* <=28 */
+  box-sizing: border-box;
+}
+
+.fp-slide {
+  float: left;
+}
+
+.fp-slide, .fp-slidesContainer {
+  height: 100%;
+  display: block;
+}
+
+.fp-slides {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  /* Safari<=6 Android<=4.3 */
+  transition: all 0.3s ease-out;
+}
+
+.fp-section.fp-table, .fp-slide.fp-table {
+  display: table;
+  width: 100%;
+}
+
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.fp-slidesContainer {
+  float: left;
+  position: relative;
+}
+
+.fp-controlArrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+}
+
+.fp-controlArrow.fp-prev {
+  left: 15px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+  right: 15px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.fp-scrollable {
+  overflow: scroll;
+}
+
+.fp-easing {
+  -webkit-transition: all 0.7s ease-out;
+  /* Safari<=6 Android<=4.3 */
+  transition: all 0.7s ease-out;
+}
+
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: -32px;
+  top: 50%;
+  opacity: 1;
+}
+
+#fp-nav.right {
+  right: 17px;
+}
+
+#fp-nav.left {
+  left: 17px;
+}
+
+.fp-slidesNav {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  opacity: 1;
+}
+
+.fp-slidesNav.bottom {
+  bottom: 17px;
+}
+
+.fp-slidesNav.top {
+  top: 17px;
+}
+
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#fp-nav li,
+.fp-slidesNav li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative;
+}
+
+.fp-slidesNav li {
+  display: inline-block;
+}
+
+#fp-nav li a,
+.fp-slidesNav li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#fp-nav li .active span,
+.fp-slidesNav .active span {
+  background: #333;
+}
+
+#fp-nav span,
+.fp-slidesNav span {
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.fp-tooltip {
+  position: absolute;
+  top: -2px;
+  color: #fff;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.fp-tooltip.right {
+  right: 20px;
+}
+
+.fp-tooltip.left {
+  left: 20px;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -295,12 +494,15 @@ h1 a, h1 a:visited {
 h2 {
   color: #ff6c22;
   font: 2em "Righteous";
-  margin: .5em 0 .5em 10%;
 }
 @media all and (min-width: 700px) {
   h2 {
     font-size: 350%;
   }
+}
+
+.h2Front {
+  margin: .5em 0 .5em 10%;
 }
 
 h3 {
@@ -315,6 +517,12 @@ h3 {
   margin: 0 5% 0 0;
   float: left;
   width: 50%;
+}
+
+.noFullPage {
+  background-color: #fff;
+  overflow: scroll;
+  text-align: center;
 }
 
 .align-right {
@@ -357,205 +565,6 @@ h3 {
   box-sizing: border-box;
 }
 
-/**
- * fullPage 2.1.9
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
- *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
- */
-html, body {
-  margin: 0;
-  padding: 0;
-  /*Avoid flicker on slides transitions for mobile phones #336 */
-  -webkit-tap-highlight-color: transparent;
-}
-
-#superContainer {
-  height: 100%;
-  position: relative;
-  /* Touch detection for Windows 8 */
-  -ms-touch-action: none;
-  /* IE 11 on Windows Phone 8.1*/
-  touch-action: none;
-}
-
-.fp-section {
-  position: relative;
-  -webkit-box-sizing: border-box;
-  /* Safari<=5 Android<=3 */
-  -moz-box-sizing: border-box;
-  /* <=28 */
-  box-sizing: border-box;
-}
-
-.fp-slide {
-  float: left;
-}
-
-.fp-slide, .fp-slidesContainer {
-  height: 100%;
-  display: block;
-}
-
-.fp-slides {
-  z-index: 1;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: all 0.3s ease-out;
-  /* Safari<=6 Android<=4.3 */
-  transition: all 0.3s ease-out;
-}
-
-.fp-section.fp-table, .fp-slide.fp-table {
-  display: table;
-  width: 100%;
-}
-
-.fp-tableCell {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-
-.fp-slidesContainer {
-  float: left;
-  position: relative;
-}
-
-.fp-controlArrow {
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  cursor: pointer;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  margin-top: -38px;
-}
-
-.fp-controlArrow.fp-prev {
-  left: 15px;
-  width: 0;
-  border-width: 38.5px 34px 38.5px 0;
-  border-color: transparent #fff transparent transparent;
-}
-
-.fp-controlArrow.fp-next {
-  right: 15px;
-  border-width: 38.5px 0 38.5px 34px;
-  border-color: transparent transparent transparent #fff;
-}
-
-.fp-scrollable {
-  overflow: scroll;
-}
-
-.fp-easing {
-  -webkit-transition: all 0.7s ease-out;
-  /* Safari<=6 Android<=4.3 */
-  transition: all 0.7s ease-out;
-}
-
-#fp-nav {
-  position: fixed;
-  z-index: 100;
-  margin-top: -32px;
-  top: 50%;
-  opacity: 1;
-}
-
-#fp-nav.right {
-  right: 17px;
-}
-
-#fp-nav.left {
-  left: 17px;
-}
-
-.fp-slidesNav {
-  position: absolute;
-  z-index: 4;
-  left: 50%;
-  opacity: 1;
-}
-
-.fp-slidesNav.bottom {
-  bottom: 17px;
-}
-
-.fp-slidesNav.top {
-  top: 17px;
-}
-
-#fp-nav ul,
-.fp-slidesNav ul {
-  margin: 0;
-  padding: 0;
-}
-
-#fp-nav li,
-.fp-slidesNav li {
-  display: block;
-  width: 14px;
-  height: 13px;
-  margin: 7px;
-  position: relative;
-}
-
-.fp-slidesNav li {
-  display: inline-block;
-}
-
-#fp-nav li a,
-.fp-slidesNav li a {
-  display: block;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#fp-nav li .active span,
-.fp-slidesNav .active span {
-  background: #333;
-}
-
-#fp-nav span,
-.fp-slidesNav span {
-  top: 2px;
-  left: 2px;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #000;
-  background: transparent;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
-.fp-tooltip {
-  position: absolute;
-  top: -2px;
-  color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
-  white-space: nowrap;
-  max-width: 220px;
-}
-
-.fp-tooltip.right {
-  right: 20px;
-}
-
-.fp-tooltip.left {
-  left: 20px;
-}
-
 .saxBodyTop {
   background-color: #ffa622;
   display: none;
@@ -590,11 +599,6 @@ html, body {
   position: relative;
   width: 100%;
 }
-@media all and (min-width: 500px) {
-  .title {
-    margin-bottom: 3em;
-  }
-}
 
 .lessonTitle {
   position: absolute;
@@ -615,7 +619,7 @@ html, body {
 .altKeyPearl {
   font-size: 60%;
   height: 6em;
-  right: 17em;
+  left: 3em;
   width: 6em;
 }
 @media all and (min-width: 500px) {
@@ -1001,17 +1005,6 @@ td {
   margin: 1em;
 }
 
-.adminWrapper {
-  margin: auto;
-  width: 90%;
-}
-
-.adminWrapper h2, .adminWrapper nav {
-  margin: 0;
-  padding: .3em;
-  text-align: center;
-}
-
 .studentInfo {
   border: 1px solid black;
   border-radius: 1em;
@@ -1035,6 +1028,7 @@ td {
   margin: 15px 0;
   padding: 15px;
   white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .lastLesson div {
@@ -1084,6 +1078,7 @@ fieldset {
   border-radius: 1em;
   margin: 1em auto;
   padding: 1em;
+  text-align: left;
   width: 35%;
 }
 
@@ -1113,38 +1108,61 @@ fieldset button {
 }
 
 .studentPortal {
-  margin: auto;
-  width: 80%;
+  z-index: 100;
+}
+@media all and (min-width: 900px) {
+  .studentPortal {
+    position: fixed;
+    left: 0;
+    width: 25%;
+  }
 }
 
 .studentPortal h2, .studentPortal nav {
-  padding: .3em;
   text-align: center;
+}
+@media all and (min-width: 900px) {
+  .studentPortal h2, .studentPortal nav {
+    margin: 1em 0 1em 15%;
+  }
 }
 
 .lessonNotes {
-  background-color: rgba(255, 108, 34, 0.15);
-  border-radius: 1em;
-  padding: 1em;
-  margin: 1em auto;
-  max-width: 700px;
+  background-color: #fff;
+  color: #000;
+  padding: 2em;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+@media all and (min-width: 900px) {
+  .lessonNotes {
+    margin-left: 30%;
+  }
+}
+
+.lessonNotes h2 {
+  font-size: 2em;
+  margin: 0;
 }
 
 .lessonNotes h3 {
   color: #ff6c22;
-  font-family: 'Lobster';
   margin: -1em 0 -2.5em;
 }
 
 .googleDrive {
   background-color: rgba(88, 88, 137, 0.75);
   border-radius: 1em;
+  margin: 1em auto;
   padding: 2em;
   text-align: center;
-  margin: auto;
-  max-width: 700px;
+  width: 90%;
+}
+@media all and (min-width: 900px) {
+  .googleDrive {
+    margin-left: 10%;
+    width: 100%;
+  }
 }
 
 .driveButton {

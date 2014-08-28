@@ -1,36 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <fieldset id="notesEntry">
-    <legend>Lesson Notes for {{student.user}}</legend>
-    <form method="post">
-      <label>
-        <div>Warm Up:</div>
-        <div class="lastLesson">
-          <div>Last Lesson</div>
-          <p>{{warmup_prev | safe}}</p>
-        </div>
-        <textarea name="warmup">{{warmup}}</textarea>
-      </label>
-      <label>
-        <div>To work on this week:</div>
-        <div class="lastLesson">
-          <div>Last Lesson</div>
-          <p>{{assign_prev | safe}}</p>
-        </div>
-        <textarea name="assign">{{assign}}</textarea>
-      </label>
-      <label>
-        <div>Tips:</div>
-        <div class="lastLesson">
-          <div>Last Lesson</div>
-          <p>{{tips_prev | safe}}</p>
-        </div>
-        <textarea name="tips">{{tips}}</textarea>
-      </label>
-      <div class="error">{{error}}</div>
-      <button>Submit!</button>
-    </form>
-  </fieldset>
-  <a id="return" href="/admin">return</a>
+  <div class="noFullPage">
+    <fieldset id="notesEntry">
+      <legend>Lesson Notes for {{student.name}}</legend>
+      <form method="post">
+        <label>
+          <div>Warm Up:</div>
+          <div class="lastLesson">
+            <div>Last Lesson</div>
+            <p>{{warmup_prev | safe}}</p>
+          </div>
+          <textarea name="warmup">{{warmup}}</textarea>
+        </label>
+        <label>
+          <div>To work on this week:</div>
+          <div class="lastLesson">
+            <div>Last Lesson</div>
+            <p>{{assign_prev}}</p>
+          </div>
+          <textarea name="assign">{{assign}}</textarea>
+        </label>
+        <label>
+          <div>Tips:</div>
+          <div class="lastLesson">
+            <div>Last Lesson</div>
+            <p>{{tips_prev}}</p>
+          </div>
+          <textarea name="tips">{{tips}}</textarea>
+        </label>
+        <div class="error">{{error}}</div>
+        <button>Submit!</button>
+      </form>
+    </fieldset>
+    <a id="return" href="/admin">return</a>
+  </div>
 {% endblock %}

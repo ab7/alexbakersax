@@ -13,6 +13,7 @@ $textShadowColor: #C70230;
 // media query thresholds
 $firstMedia: 500px;
 $secondMedia: 700px;
+$thirdMedia: 900px;
 
 // base styles
 .content {
@@ -21,7 +22,7 @@ $secondMedia: 700px;
   font-family: 'Noto Sans', sans-serif;
   overflow: scroll;
 
-  @media all and (min-width: 500px) {
+  @media all and (min-width: $firstMedia) {
     overflow: hidden;
   }
 }
@@ -83,11 +84,14 @@ h1 {
 h2 {
   color: $mainColor;
   font: 2em $buttonFont;
-  margin: .5em 0 .5em 10%;
 
   @media all and (min-width: $secondMedia) {
     font-size: 350%;
   }
+}
+
+.h2Front {
+   margin: .5em 0 .5em 10%;
 }
 
 h3 {
@@ -102,4 +106,10 @@ h3 {
   margin: 0 5% 0 0;
   float: left;
   width: 50%;
+}
+
+.noFullPage {
+  background-color: #fff;
+  overflow: scroll;
+  text-align: center;
 }

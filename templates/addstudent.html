@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="noFullPage">
     <h2 class="formTitle">{{title}}</h2>
     <fieldset>
       <form method="post">
@@ -40,4 +41,5 @@
       </form>
     </fieldset>
     <a id="return" href="/admin">return</a>
+  </div>
 {% endblock %}

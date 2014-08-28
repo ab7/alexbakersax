@@ -205,9 +205,9 @@ class AddNotes(Handler):
         student = ds.get_student(user_key)
         latest_notes = ds.get_latest_notes(user_key)
         if latest_notes:
-            warmup_prev = latest_notes.warmup,
-            assign_prev = latest_notes.assign,
-            tips_prev = latest_notes.tips
+            warmup_prev = latest_notes[0].warmup,
+            assign_prev = latest_notes[0].assign,
+            tips_prev = latest_notes[0].tips
             self.render(
                 'addnotes.html',
                 student = student,

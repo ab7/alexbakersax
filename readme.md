@@ -7,8 +7,10 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 ### Todo
 
-* Style backend pages
 * Add music note css
 * Animate sax keys
+* Redo community/contact links
 * Same page login
-* Refactor materials grid
+* Fix "Last Lesson" notes bug
+* Make sure phone number is linked on mobile
+* Fix no-js header

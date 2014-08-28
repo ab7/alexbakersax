@@ -12,8 +12,10 @@
       <a class="driveButton" href="//drive.google.com/folderview?id=0BzUQswNFP7feQVRNNmN1bGFqRmc&usp=sharing" target="_blank">Community Folder</a>
       <a class="driveButton" href="{{drive}}" target="_blank">{{student.name.split()[0]}}'s Folder</a>
     </div>
+  </div>
+  <div id="fullpage">
     {% for n in notes %}
-      <div class="lessonNotes">
+      <div class="section lessonNotes">
         <h2>Lesson Notes - {{n.created.strftime('%A %b %d, %Y')}}</h2>
         <h3>Warmup:</h3>
         <p>{{n.warmup | safe}}</p>
