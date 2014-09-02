@@ -11,7 +11,7 @@ $adjacentColorDark: #9C0024;
 $textShadowColor: #C70230;
 
 // media query thresholds
-$firstMedia: 500px;
+$firstMedia: 650px;
 $secondMedia: 700px;
 $thirdMedia: 900px;
 
@@ -76,7 +76,7 @@ h1 {
     text-decoration: none;
   }
 
-  @media all and (min-width: $secondMedia) {
+  @media all and (min-width: $firstMedia) {
     font-size: 350%;
   }
 }

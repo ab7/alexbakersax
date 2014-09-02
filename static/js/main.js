@@ -44,7 +44,7 @@ $(document).ready(function () {
     media = "(min-width: 900px)";
     overflow = true;
   } else {
-    media = "(min-width: 500px)";
+    media = "(min-width: 650px)";
   }
   if (matchMedia) {
     mq = window.matchMedia(media);
