@@ -428,7 +428,7 @@ th {
   font-family: 'Noto Sans', sans-serif;
   overflow: scroll;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 650px) {
   .content {
     overflow: hidden;
   }
@@ -442,7 +442,7 @@ th {
   padding: 15px;
   width: 90%;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 650px) {
   .pageWrapper {
     border-radius: 5em;
     padding: 2em;
@@ -456,7 +456,7 @@ th {
   margin-bottom: 2em;
   vertical-align: top;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 650px) {
   .contentWrapper {
     display: inline-block;
     height: 100%;
@@ -484,7 +484,7 @@ h1 a, h1 a:visited {
   color: #fff;
   text-decoration: none;
 }
-@media all and (min-width: 700px) {
+@media all and (min-width: 650px) {
   h1 {
     font-size: 350%;
   }
@@ -603,7 +603,7 @@ h3 {
   top: 1.2em;
   right: 15px;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 650px) {
   .lessonTitle {
     left: 3.7em;
     z-index: 10;
@@ -620,7 +620,7 @@ h3 {
   left: 3em;
   width: 6em;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 650px) {
   .altKeyPearl {
     font-size: 66%;
     top: 1.5em;
@@ -828,6 +828,21 @@ h3 {
   -webkit-transform: skewX(-10deg);
   -ms-transform: skewX(-10deg);
   transform: skewX(-10deg);
+}
+
+.musicNotes {
+  position: absolute;
+  left: 34em;
+  top: -15em;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+  width: 1000px;
+  z-index: -1;
+}
+
+.cover {
+  background-color: #c70230;
 }
 
 .vid {
