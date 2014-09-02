@@ -4,6 +4,7 @@ $saxKeyColor: rgba(253, 218, 143, 0.54);
 $saxPearlColor: rgb(255, 248, 240);
 $saxPearlBorder: rgb(183, 141, 32);
 $saxArmColor: #D98302;
+$saxGrad: linear-gradient(to left, $saxMainColor 0%, #D98E1C 100%);
 
 // sizes
 $mainKey: 9em;
@@ -19,6 +20,7 @@ $armLen: 100%;
 // sax top main styles
 .saxBodyTop {
   background-color: $saxMainColor;
+  background-image: $saxGrad;
   display: none;
   float: left;
   height: 100%;
@@ -40,11 +42,25 @@ $armLen: 100%;
   border: 3px solid $saxPearlBorder;
   border-radius: 100%;
   font-family: $buttonFont;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+}
+
+.pearl:hover {
+  background-color: #d6d6d6;
+}
+
+.mainKey {
+  background-color: $saxKeyColor;
+  border-radius: 100%;
+  box-shadow: -4px 5px 5px 0px rgba(72, 72, 72, 0.22);
   position: absolute;
 }
 
 .title {
   background-color: $saxMainColor;
+  background-image: $saxGrad;
   font-size: 1.5em;
   margin-bottom: 2.5em;
   padding: 0 15px 1.8em;
@@ -91,10 +107,8 @@ $armLen: 100%;
 }
 
 .bKeyMain {
-  background-color: $saxKeyColor;
-  border-radius: 100%;
+  @extend .mainKey;
   height: $mainKey;
-  position: absolute;
   right: $keyPosR - 3;
   width: $mainKey;
 }
@@ -102,6 +116,7 @@ $armLen: 100%;
 .bKeyPearl {
   @extend .pearl;
   height: $bigKey;
+  padding-top: 13px;
   right: $keyPosR - 3;
   top: $keyPosT + 2;
   width: $bigKey;
@@ -124,10 +139,8 @@ $armLen: 100%;
 }
 
 .bisKeyMain {
-  background-color: $saxKeyColor;
-  border-radius: 100%;
+  @extend .mainKey;
   height: $mainKey - 1;
-  position: absolute;
   right: $keyPosR - 2.7;
   top: $keyPosT - 3.7;
   width: $mainKey - 1;
@@ -159,6 +172,7 @@ $armLen: 100%;
 .aKeyPearl {
   @extend .pearl;
   height: $bigKey;
+  line-height: 5.5em;
   right: $keyPosR - 4;
   top: $keyPosT - 11.5;
   width: $bigKey;
@@ -179,18 +193,17 @@ $armLen: 100%;
 }
 
 .gKeyMain {
-  background-color: $saxKeyColor;
-  border-radius: 100%;
+  @extend .mainKey;
   height: $mainKey;
-  position: absolute;
-  right: $keyPosT - 1;
-  top: $keyPosT - 4;
+  right: $keyPosT;
+  top: $keyPosT - 3;
   width: $mainKey;
 }
 
 .gKeyPearl {
   @extend .pearl;
   height: $bigKey;
+  line-height: 5.5em;
   right: $keyPosR - 8;
   top: $keyPosT - 6;
   width: $bigKey;
@@ -210,13 +223,14 @@ $armLen: 100%;
   height: $armWidth;
   position: absolute;
   right: $keyPosR;
-  top: $keyPosT;
+  top: $keyPosT + 1;
   width: $armLen;
 }
 
 // bell
 .bell {
   background-color: $saxMainColor;
+  background-image: $saxGrad;
   display: none;
   height: 100%;
   position: relative;
@@ -248,6 +262,7 @@ $armLen: 100%;
 
 .bellRim {
   background-color: $saxMainColor;
+  background-image: $saxGrad;
   height: 200px;
   position: absolute;
   top: 540px;

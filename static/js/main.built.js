@@ -2226,11 +2226,11 @@ $(document).ready(function () {
   // media query event handler
   var mq, media, overflow;
   overflow = false;
-  if (window.location.href.indexOf("student") > -1) {
-    media = "(min-width: 900px)";
+  if (window.location.href.indexOf('student') > -1) {
+    media = '(min-width: 900px)';
     overflow = true;
   } else {
-    media = "(min-width: 650px)";
+    media = '(min-width: 650px)';
   }
   if (matchMedia) {
     mq = window.matchMedia(media);
@@ -2240,4 +2240,15 @@ $(document).ready(function () {
 
   // initialize letteringjs
   $('.circleWrap').lettering();
+
+  // button animation
+  $('.bisKeyPearl').click(function () {
+    var key;
+    key = $('.bisKey');
+    $('.bisKeyMain').css({'box-shadow': 'none'});
+    key.animate({top: '+=.5em'}, 100, function () {
+      key.animate({top: '-=.5em'}, 100);
+      $('.bisKeyMain').css({'box-shadow': '-4px 5px 5px 0px rgba(72, 72, 72, 0.22)'});
+    });
+  });
 });
