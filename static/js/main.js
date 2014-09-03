@@ -3,7 +3,7 @@
 // media query change
 function widthChange(mq, overflow) {
   'use strict';
-  var hash;
+  var hash, studentSidebar;
   hash = window.location.hash;
   if (mq.matches) {
     // add css if js-enabled
@@ -13,7 +13,6 @@ function widthChange(mq, overflow) {
     // initialize fullpagejs
     $('#fullpage').fullpage({
       afterRender: function () {
-        var studentSidebar;
         studentSidebar = $('.studentPortal');
         if (studentSidebar.length) {
           studentSidebar.show();
@@ -37,8 +36,9 @@ function widthChange(mq, overflow) {
 // initialize
 $(document).ready(function () {
   'use strict';
+  var mq, media, overflow, bisKey, bisKeyMain, frontNav;
+
   // media query event handler
-  var mq, media, overflow, bisKey, bisKeyMain;
   overflow = false;
   if (window.location.href.indexOf('student') > -1) {
     media = '(min-width: 900px)';
@@ -69,10 +69,11 @@ $(document).ready(function () {
   });
 
   // nav bar control
+  frontNav = $('.frontNav');
   $(window).on('hashchange', function () {
-    $('.frontNav').hide();
+    frontNav.hide();
     if (window.location.hash !== '#full') {
-      $('.frontNav').fadeIn(2000);
+      frontNav.fadeIn(2000);
     }
   });
 });
