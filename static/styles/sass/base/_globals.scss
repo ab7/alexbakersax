@@ -9,6 +9,7 @@ $secondaryColor: #D94A02;
 $adjacentColor: #C70230;
 $adjacentColorDark: #9C0024;
 $textShadowColor: #C70230;
+$linkHover: #8dff96;
 
 // media query thresholds
 $firstMedia: 650px;
@@ -36,8 +37,9 @@ $thirdMedia: 900px;
   width: 90%;
 
   @media all and (min-width: $firstMedia) {
-    border-radius: 5em;
-    padding: 2em;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1em 1em 5em 1em;
     text-align: center;
     width: 80%;
   }
@@ -59,6 +61,10 @@ $thirdMedia: 900px;
 
 a, a:visited {
   color: $mainColor;
+}
+
+a:hover {
+  color: $linkHover;
 }
 
 fieldset {
@@ -112,4 +118,13 @@ h3 {
   background-color: #fff;
   overflow: scroll;
   text-align: center;
+}
+
+// nav bar
+.frontNav {
+  display: none;
+  left: 15%;
+  position: fixed;
+  top: 5.6em;
+  z-index: 1;
 }

@@ -445,8 +445,9 @@ th {
 }
 @media all and (min-width: 650px) {
   .pageWrapper {
-    border-radius: 5em;
-    padding: 2em;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1em 1em 5em 1em;
     text-align: center;
     width: 80%;
   }
@@ -469,6 +470,10 @@ th {
 
 a, a:visited {
   color: #ff6c22;
+}
+
+a:hover {
+  color: #8dff96;
 }
 
 fieldset {
@@ -523,6 +528,14 @@ h3 {
   background-color: #fff;
   overflow: scroll;
   text-align: center;
+}
+
+.frontNav {
+  display: none;
+  left: 15%;
+  position: fixed;
+  top: 5.6em;
+  z-index: 1;
 }
 
 .align-right {
@@ -635,6 +648,7 @@ h3 {
   font-size: 60%;
   height: 6em;
   left: 3em;
+  padding-top: 25px;
   width: 6em;
 }
 @media all and (min-width: 650px) {
@@ -838,12 +852,18 @@ h3 {
 }
 
 .musicNotes {
+  display: none;
   position: absolute;
   left: 34em;
   top: -15em;
   transform: rotate(15deg);
   width: 1000px;
   z-index: -1;
+}
+@media all and (min-width: 650px) {
+  .musicNotes {
+    display: block;
+  }
 }
 
 .cover {
@@ -890,7 +910,6 @@ h3 {
   border-radius: 100px;
   border: 1px solid rgba(170, 170, 170, 0.44);
   color: #fff;
-  cursor: pointer;
   font: 1em Verdana;
   padding: 4px 12px;
   outline: none;
@@ -899,9 +918,6 @@ h3 {
 
 .clickHere:hover {
   border-color: #8dff96;
-  color: #8dff96;
-  -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  -moz-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
   box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
 }
 
@@ -916,7 +932,6 @@ h3 {
 
 th {
   background-color: rgba(255, 108, 34, 0.62);
-  font-family: "Raleway";
   padding: 1%;
 }
 
@@ -983,7 +998,6 @@ td {
   border-radius: 100px;
   border: 1px solid rgba(170, 170, 170, 0.44);
   color: #fff;
-  cursor: pointer;
   font: 1em Verdana;
   padding: 4px 12px;
   outline: none;
@@ -992,9 +1006,6 @@ td {
 
 .clickHere:hover {
   border-color: #8dff96;
-  color: #8dff96;
-  -webkit-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
-  -moz-box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
   box-shadow: -1px 2px 2px 0px rgba(50, 62, 9, 0.19);
 }
 
@@ -1009,7 +1020,6 @@ td {
 
 th {
   background-color: rgba(255, 108, 34, 0.62);
-  font-family: "Raleway";
   padding: 1%;
 }
 

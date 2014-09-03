@@ -89,6 +89,7 @@ $armLen: 100%;
   font-size: 60%;
   height: $bigKey;
   left: $keyPosR - 3;
+  padding-top: 25px;
   width: $bigKey;
 
   @media all and (min-width: $firstMedia) {
@@ -305,10 +306,15 @@ $armLen: 100%;
 }
 
 .musicNotes {
+  display: none;
   position: absolute;
   left: 34em;
   top: -15em;
   transform: rotate(15deg);
   width: 1000px;
   z-index: -1;
+
+  @media all and (min-width: $firstMedia) {
+    display: block;
+  }
 }

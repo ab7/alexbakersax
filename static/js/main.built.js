@@ -2224,7 +2224,7 @@ function widthChange(mq, overflow) {
 $(document).ready(function () {
   'use strict';
   // media query event handler
-  var mq, media, overflow;
+  var mq, media, overflow, bisKey, bisKeyMain;
   overflow = false;
   if (window.location.href.indexOf('student') > -1) {
     media = '(min-width: 900px)';
@@ -2242,13 +2242,23 @@ $(document).ready(function () {
   $('.circleWrap').lettering();
 
   // button animation
-  $('.bisKeyPearl').click(function () {
-    var key;
-    key = $('.bisKey');
-    $('.bisKeyMain').css({'box-shadow': 'none'});
-    key.animate({top: '+=.5em'}, 100, function () {
-      key.animate({top: '-=.5em'}, 100);
-      $('.bisKeyMain').css({'box-shadow': '-4px 5px 5px 0px rgba(72, 72, 72, 0.22)'});
+  bisKey = $('.bisKey');
+  bisKeyMain = $('.bisKeyMain');
+  $('.bisKeyPearl').mousedown(function () {
+    bisKey.animate({top: '+=.5em'}, 100, function () {
+      bisKeyMain.css({'box-shadow': 'none'});
     });
+  }).mouseup(function () {
+    bisKey.animate({top: '-=.5em'}, 100, function () {
+      bisKeyMain.css({'box-shadow': '-4px 5px 5px 0px rgba(72, 72, 72, 0.22)'});
+    });
+  });
+
+  // nav bar control
+  $(window).on('hashchange', function () {
+    $('.frontNav').hide();
+    if (window.location.hash !== '#full') {
+      $('.frontNav').fadeIn(2000);
+    }
   });
 });
