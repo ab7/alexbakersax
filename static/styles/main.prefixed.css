@@ -474,10 +474,6 @@ a:hover {
   color: #d94a02;
 }
 
-fieldset {
-  max-width: 380px;
-}
-
 h1 {
   color: #fff;
   font: 2.5em "Lobster";
@@ -1770,22 +1766,27 @@ fieldset {
   margin: 1em auto;
   padding: 1em;
   text-align: left;
-  width: 35%;
+  max-width: 400px;
 }
 
 fieldset input {
   display: block;
+  margin-bottom: 1em;
+  width: 100%;
 }
 
 fieldset button {
+  background-color: #fff;
   border-radius: 5px;
   margin-top: 1em;
   outline: none;
   text-align: center;
+  width: 100%;
 }
 
 #return {
   display: block;
+  margin-bottom: 2em;
   text-align: center;
   color: #ff6c22;
 }
@@ -1799,7 +1800,7 @@ fieldset button {
 }
 
 .studentPortal {
-  z-index: 100;
+  z-index: 1;
 }
 @media all and (min-width: 800px) {
   .studentPortal {
@@ -1812,7 +1813,7 @@ fieldset button {
 .studentPortal h2, .studentPortal nav {
   text-align: center;
 }
-@media all and (min-width: 1500px) {
+@media all and (min-width: 800px) {
   .studentPortal h2, .studentPortal nav {
     margin: 1em 0 1em 15%;
   }
@@ -1825,7 +1826,7 @@ fieldset button {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-@media all and (min-width: 1500px) {
+@media all and (min-width: 800px) {
   .lessonNotes {
     margin-left: 30%;
   }
@@ -1849,7 +1850,7 @@ fieldset button {
   text-align: center;
   width: 90%;
 }
-@media all and (min-width: 1500px) {
+@media all and (min-width: 800px) {
   .googleDrive {
     margin-left: 10%;
     width: 100%;

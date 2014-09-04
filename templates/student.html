@@ -13,9 +13,9 @@
       <a class="driveButton" href="{{drive}}" target="_blank">{{student.name.split()[0]}}'s Folder</a>
     </div>
   </div>
-  <div id="fullpage">
+    <div id="fullpage">
     {% for n in notes %}
-      <div class="section lessonNotes">
+      <div class="lessonNotes">
         <h2>Lesson Notes - {{n.created.strftime('%A %b %d, %Y')}}</h2>
         <h3>Warmup:</h3>
         <p>{{n.warmup | safe}}</p>
@@ -26,7 +26,7 @@
         <a class="hide" href='/editnote?q={{n.key.urlsafe()}}&s={{student.key.urlsafe()}}'>edit</a>
       </div>
     {% endfor %}
-  </div>
+    </div>
   <script>
     var hidden, i;
     hidden = document.getElementsByClassName('hide');

@@ -2187,7 +2187,7 @@
 /*global $, alert, console, matchMedia*/
 
 // media query change
-function widthChange(mq, overflow) {
+function widthChange(mq) {
   'use strict';
   var hash, studentSidebar;
   hash = window.location.hash;
@@ -2205,10 +2205,10 @@ function widthChange(mq, overflow) {
         }
       },
       anchors: ['full', 'new-student-info', 'materials', 'contact'],
+      autoScrolling: false,
       css3: true,
       loopHorizontal: false,
       resize: false,
-      scrollOverflow: overflow,
       verticalCentered: false
     });
   } else {
@@ -2222,20 +2222,15 @@ function widthChange(mq, overflow) {
 // initialize
 $(document).ready(function () {
   'use strict';
-  var mq, media, overflow, bisKey, bisKeyMain, frontNav;
+  var mq, media, bisKey, bisKeyMain, frontNav;
 
   // media query event handler
-  overflow = false;
-  if (window.location.href.indexOf('student') > -1) {
-    media = '(min-width: 800px)';
-    overflow = true;
-  } else {
-    media = '(min-width: 800px)';
-  }
+  media = '(min-width: 800px)';
+
   if (matchMedia) {
     mq = window.matchMedia(media);
     mq.addListener(widthChange);
-    widthChange(mq, overflow);
+    widthChange(mq);
   }
 
   // initialize letteringjs
@@ -2256,10 +2251,14 @@ $(document).ready(function () {
 
   // nav bar control
   frontNav = $('.frontNav');
+  if (window.location.hash !== '#full' && window.location.hash !== '') {
+    frontNav.finish().fadeIn(4000);
+  }
   $(window).on('hashchange', function () {
     frontNav.hide();
     if (window.location.hash !== '#full') {
-      frontNav.fadeIn(2000);
+      frontNav.finish().fadeIn(2000);
     }
   });
 });
+

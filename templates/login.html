@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <fieldset>
-    <legend>Login</legend>
-    <form method="post">
-      <label>
-        Username
-        <input type="text" name="username" value="{{username}}" required>
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" value="" required>
-      </label>
-      <div class="error">
-        {{login_error}}
-      </div>
-      <button>
-        Login
-      </button>
-    </form>
-  </fieldset>
-  <a id="return" href="/">return</a>
+  <div class="noFullPage">
+    <fieldset>
+      <legend>Login</legend>
+      <form method="post">
+        <label>
+          Username
+          <input type="text" name="username" value="{{username}}" required>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" value="" required>
+        </label>
+        <div class="error">
+          {{login_error}}
+        </div>
+        <button>
+          Login
+        </button>
+      </form>
+    </fieldset>
+    <a id="return" href="/">return</a>
+  </div>
 {% endblock %}

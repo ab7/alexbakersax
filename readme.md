@@ -7,7 +7,6 @@ This app helps organize my private saxophone lesson notes. I used to write them 
 
 ### Todo
 
-* Fix forms fullpage issues
 * Same page login
 * Fix "Last Lesson" notes bug
 * Make sure phone number is linked on mobile
