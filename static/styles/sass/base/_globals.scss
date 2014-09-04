@@ -9,12 +9,12 @@ $secondaryColor: #D94A02;
 $adjacentColor: #C70230;
 $adjacentColorDark: #9C0024;
 $textShadowColor: #C70230;
-$linkHover: #8dff96;
+$linkHover: #D94A02;
 
 // media query thresholds
-$firstMedia: 650px;
-$secondMedia: 700px;
-$thirdMedia: 900px;
+$firstMedia: 800px;
+$secondMedia: 1000px;
+$thirdMedia: 1500px;
 
 // base styles
 .content {
@@ -37,9 +37,8 @@ $thirdMedia: 900px;
   width: 90%;
 
   @media all and (min-width: $firstMedia) {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    padding: 1em 1em 5em 1em;
+    border-radius: 25px;
+    padding-bottom: 12em;
     text-align: center;
     width: 80%;
   }
@@ -91,7 +90,7 @@ h2 {
   color: $mainColor;
   font: 2em $buttonFont;
 
-  @media all and (min-width: $secondMedia) {
+  @media all and (min-width: $firstMedia) {
     font-size: 350%;
   }
 }

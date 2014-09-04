@@ -2227,10 +2227,10 @@ $(document).ready(function () {
   // media query event handler
   overflow = false;
   if (window.location.href.indexOf('student') > -1) {
-    media = '(min-width: 900px)';
+    media = '(min-width: 800px)';
     overflow = true;
   } else {
-    media = '(min-width: 650px)';
+    media = '(min-width: 800px)';
   }
   if (matchMedia) {
     mq = window.matchMedia(media);

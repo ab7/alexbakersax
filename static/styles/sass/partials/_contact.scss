@@ -1,12 +1,43 @@
 .setupLesson {
-  background-color: purple;
-  border: 5px solid red;
-  border-radius: 20px;
-  padding: 35px;
-  text-align: center;
+  height: 12em;
+  margin: auto;
 }
 
-.setupLesson h3 {
-  color: #fff;
-  font: 250% $titleFont;
+.lessonCircle {
+  text-align: center;
+  position: relative;
 }
+
+.circleWrap span {
+  color: #fff;
+  font: 26px Monaco, MonoSpace;
+  height: 90px;
+  position: absolute;
+  width: 20px;
+  left: 6.2em;
+  top: 0;
+  transform-origin: center 140%;
+}
+
+@for $i from 1 through 100 {
+  .char#{$i} {
+    transform: rotate((($i * 14) - 105) + deg);
+  }
+}
+
+.today {
+  color: #fff;
+  font: 350% $titleFont;
+  position: absolute;
+  left: 1.8em;
+  top: 1.4em;
+}
+
+.contactInfo {
+  left: 3em;
+  position: absolute;
+  top: 9.5em;
+}
+
+
+

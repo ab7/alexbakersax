@@ -2,7 +2,7 @@
 .studentPortal {
   z-index: 100;
 
-  @media all and (min-width: $thirdMedia) {
+  @media all and (min-width: $firstMedia) {
     position: fixed;
     left: 0;
     width: 25%;

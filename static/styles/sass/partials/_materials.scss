@@ -65,11 +65,20 @@ td {
 }
 
 .comFolderLink {
-  color: #fff;
-  background-color: purple;
-  border: 5px solid red;
-  border-radius: 15px;
+  color: $mainColor;
+  background-color: #fff;
+  border: 5px solid rgb(183, 141, 32);;
+  border-radius: 100%;
   display: block;
   font: 1em $titleFont;
-  margin: 1em;
+  line-height: 9.5em;
+  height: 10em;
+  margin: 1em auto;
+  text-align: center;
+  width: 10em;
+}
+
+.comFolderLink:hover {
+  background-color: #9f9f9f;
+  border-color: $linkHover
 }
