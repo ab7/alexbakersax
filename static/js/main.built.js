@@ -2251,7 +2251,7 @@ $(document).ready(function () {
 
   // nav bar control
   frontNav = $('.frontNav');
-  if (window.location.hash !== '#full' && window.location.hash !== '') {
+  if (window.location.hash !== '#full' && window.location.hash !== '' && window.location.hash !== '#mobile') {
     frontNav.finish().fadeIn(4000);
   }
   $(window).on('hashchange', function () {
