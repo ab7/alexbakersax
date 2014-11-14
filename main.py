@@ -211,8 +211,8 @@ class AddNotes(Handler):
             self.render(
                 'addnotes.html',
                 student = student,
-                warmup_prev = warmup_prev,
-                assign_prev = assign_prev,
+                warmup_prev = warmup_prev[0],
+                assign_prev = assign_prev[0],
                 tips_prev = tips_prev
             )
         else:

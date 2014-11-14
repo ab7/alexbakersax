@@ -17,7 +17,7 @@
           <div>To work on this week:</div>
           <div class="lastLesson">
             <div>Last Lesson</div>
-            <p>{{assign_prev}}</p>
+            <p>{{assign_prev | safe}}</p>
           </div>
           <textarea name="assign">{{assign}}</textarea>
         </label>
@@ -25,7 +25,7 @@
           <div>Tips:</div>
           <div class="lastLesson">
             <div>Last Lesson</div>
-            <p>{{tips_prev}}</p>
+            <p>{{tips_prev | safe}}</p>
           </div>
           <textarea name="tips">{{tips}}</textarea>
         </label>
